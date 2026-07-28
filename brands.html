@@ -28,9 +28,85 @@
                         <section class="section"><div class="container">
                             <input id="brandSearch" class="searchbox" placeholder="Search brands" style="margin-bottom:30px">
                             <div id="brandGrid" class="brand-grid"></div></div></section></main>
-                            <script>document.addEventListener('DOMContentLoaded',()=>{const brands=[...new Set(PRODUCTS.map(p=>p.brand))].sort();const draw=q=>document.querySelector('#brandGrid').innerHTML=brands.filter(b=>b.toLowerCase().includes(q.toLowerCase())).map(b=>`<a class="brand-card" href="products.html?brand=${encodeURIComponent(b)}">
-                            <h3>${b}</h3><p>${PRODUCTS.filter(p=>p.brand===b).length} sample products</p></a>`).join('');draw('');
-                            brandSearch.oninput=e=>draw(e.target.value)})</script><footer class="footer">
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const brands = [
+        {
+            name: "Amul",
+            logo: "assets/images/brands/amul.png"
+        },
+        {
+            name: "Daawat",
+            logo: "assets/images/brands/daawat.png"
+        },
+        {
+            name: "Del Monte",
+            logo: "assets/images/brands/del-monte.png"
+        },
+        {
+            name: "Hershey",
+            logo: "assets/images/brands/hershey.png"
+        },
+        {
+            name: "ITC",
+            logo: "assets/images/brands/itc.png"
+        },
+        {
+            name: "McCain",
+            logo: "assets/images/brands/mccain.png"
+        },
+        {
+            name: "Milky Mist",
+            logo: "assets/images/brands/milky-mist.png"
+        },
+        {
+            name: "Naga",
+            logo: "assets/images/brands/naga.png"
+        },
+        {
+            name: "Nestle",
+            logo: "assets/images/brands/nestle.png"
+        },
+        {
+            name: "Rich's",
+            logo: "assets/images/brands/richs.png"
+        }
+    ];
+
+    const draw = (q) => {
+        document.querySelector('#brandGrid').innerHTML = brands
+            .filter(brand =>
+                brand.name.toLowerCase().includes(q.toLowerCase())
+            )
+            .map(brand => `
+                <a class="brand-card"
+                   href="products.html?brand=${encodeURIComponent(brand.name)}">
+
+                    <img
+                        src="${brand.logo}"
+                        alt="${brand.name}"
+                        style="
+                            width: 150px;
+                            height: 90px;
+                            object-fit: contain;
+                            margin: auto;
+                        "
+                    >
+
+                </a>
+            `)
+            .join('');
+    };
+
+    draw('');
+
+    document.querySelector('#brandSearch').oninput = (e) => {
+        draw(e.target.value);
+    };
+});
+</script>
+                            <footer class="footer">
                                 <div class="container"><div class="footer-grid"><div><a class="logo" href="index.html" style="color:white">
                                     <span class="logo-mark">AM</span>AnnaMithra</a>
                                     <p>Professional dairy and frozen-food distribution for hotels, restaurants, bakeries, retailers and institutional kitchens.</p>
