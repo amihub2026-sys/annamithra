@@ -669,7 +669,7 @@ window.PRODUCTS = [
     fullDescription:
       "Chicken Nuggets is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=900&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJNkPmGcpxmU4XRmJXkejU40fuGIOjULaW0QMWNmkVTQ&s=10",
     galleryImages: [],
     packSizes: ["500 g", "1 kg"],
     storageType: "Frozen",
@@ -698,7 +698,7 @@ window.PRODUCTS = [
     fullDescription:
       "Chicken Popcorn is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=900&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJNkPmGcpxmU4XRmJXkejU40fuGIOjULaW0QMWNmkVTQ&s=10",
     galleryImages: [],
     packSizes: ["1 kg"],
     storageType: "Frozen",
@@ -727,7 +727,7 @@ window.PRODUCTS = [
     fullDescription:
       "Chicken Sausage is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=900&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJNkPmGcpxmU4XRmJXkejU40fuGIOjULaW0QMWNmkVTQ&s=10",
     galleryImages: [],
     packSizes: ["500 g", "1 kg"],
     storageType: "Frozen",
@@ -785,7 +785,7 @@ window.PRODUCTS = [
     fullDescription:
       "Non-Dairy Whip Topping is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd3aLQKgjMil2Lf4cCrDCMN_Xo7rws5cTokvQSymi10g&s=10",
     galleryImages: [],
     packSizes: ["1 L"],
     storageType: "Frozen",
@@ -819,7 +819,7 @@ window.PRODUCTS = [
     fullDescription:
       "Dark Chocolate Compound is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd3aLQKgjMil2Lf4cCrDCMN_Xo7rws5cTokvQSymi10g&s=10",
     galleryImages: [],
     packSizes: ["500 g", "1 kg"],
     storageType: "Ambient",
@@ -997,6 +997,6 @@ window.CATEGORIES = [
     slug: "sauces",
     description: "Professional sauces, mayonnaise and culinary dressings.",
     image:
-      "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=1200&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd3aLQKgjMil2Lf4cCrDCMN_Xo7rws5cTokvQSymi10g&s=10",
   },
 ];

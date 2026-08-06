@@ -39,3 +39,43 @@ function shared() {
     .forEach((e) => (e.textContent = new Date().getFullYear()));
 }
 document.addEventListener("DOMContentLoaded", shared);
+document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("aboutVideo");
+    const soundButton = document.getElementById("aboutSoundBtn");
+
+    if (!video || !soundButton) return;
+
+    const icon = soundButton.querySelector(".sound-icon");
+    const text = soundButton.querySelector(".sound-text");
+
+    soundButton.addEventListener("click", async () => {
+        try {
+            if (video.muted) {
+                video.muted = false;
+                video.volume = 1;
+
+                await video.play();
+
+                icon.textContent = "🔇";
+                text.textContent = "Mute Sound";
+                soundButton.classList.add("sound-on");
+                soundButton.setAttribute(
+                    "aria-label",
+                    "Mute video sound"
+                );
+            } else {
+                video.muted = true;
+
+                icon.textContent = "🔊";
+                text.textContent = "Play Sound";
+                soundButton.classList.remove("sound-on");
+                soundButton.setAttribute(
+                    "aria-label",
+                    "Turn on video sound"
+                );
+            }
+        } catch (error) {
+            console.error("Unable to play About video sound:", error);
+        }
+    });
+});
