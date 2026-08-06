@@ -1,1 +1,133 @@
-const state={search:'',category:'',brand:'',storage:'',food:'',sort:'az',page:1,perPage:12};const $=s=>document.querySelector(s);function productCard(p){const pack=p.packSizes.join(', ');const msg=`Hello, I would like to enquire about ${p.productName}, ${p.brand}, ${pack}. Page: ${location.href}`;return `<article class="product-card"><a class="product-image" href="product-details.html?slug=${p.slug}"><img loading="lazy" width="600" height="500" src="${p.mainImage}" alt="${p.productName}"></a><div class="product-body"><span class="kicker">${p.brand}</span><h3><a href="product-details.html?slug=${p.slug}">${p.productName}</a></h3><div class="meta">${p.category}</div><div class="badges"><span class="badge">${p.storageType}</span><span class="badge">${p.foodType}</span></div><div class="meta">Packs: ${pack}</div><div class="card-actions"><a class="btn btn-outline" href="product-details.html?slug=${p.slug}">View Details</a><a class="btn btn-primary" target="_blank" rel="noopener" href="${wa(msg)}">WhatsApp</a></div></div></article>`}function filtered(){let list=[...PRODUCTS];const q=state.search.toLowerCase();if(q)list=list.filter(p=>[p.productName,p.brand,p.category,p.productCode,...p.keywords].join(' ').toLowerCase().includes(q));if(state.category)list=list.filter(p=>p.categorySlug===state.category);if(state.brand)list=list.filter(p=>p.brand===state.brand);if(state.storage)list=list.filter(p=>p.storageType===state.storage);if(state.food)list=list.filter(p=>p.foodType===state.food);list.sort((a,b)=>state.sort==='za'?b.productName.localeCompare(a.productName):state.sort==='new'?Number(b.isNew)-Number(a.isNew):state.sort==='featured'?Number(b.isFeatured)-Number(a.isFeatured):a.productName.localeCompare(b.productName));return list}function render(){const list=filtered(),pages=Math.max(1,Math.ceil(list.length/state.perPage));state.page=Math.min(state.page,pages);const items=list.slice((state.page-1)*state.perPage,state.page*state.perPage);$('#productGrid').innerHTML=items.length?items.map(productCard).join(''):'<div class="empty" style="grid-column:1/-1"><h3>No products found</h3><p>Try removing some filters or searching a different term.</p></div>';$('#resultCount').textContent=`Showing ${items.length} of ${list.length} products`;$('#pagination').innerHTML=Array.from({length:pages},(_,i)=>`<button class="${state.page===i+1?'active':''}" data-page="${i+1}">${i+1}</button>`).join('');$('#pagination').querySelectorAll('button').forEach(b=>b.onclick=()=>{state.page=+b.dataset.page;render();scrollTo({top:300,behavior:'smooth'})})}function initProducts(){const catSel=$('#categoryFilter'),brandSel=$('#brandFilter');CATEGORIES.forEach(c=>catSel.insertAdjacentHTML('beforeend',`<option value="${c.slug}">${c.name}</option>`));[...new Set(PRODUCTS.map(p=>p.brand))].sort().forEach(b=>brandSel.insertAdjacentHTML('beforeend',`<option>${b}</option>`));const params=new URLSearchParams(location.search);if(params.get('category'))state.category=params.get('category');if(params.get('brand'))state.brand=params.get('brand');let timer;$('#productSearch').oninput=e=>{clearTimeout(timer);timer=setTimeout(()=>{state.search=e.target.value;state.page=1;render()},250)};[['categoryFilter','category'],['brandFilter','brand'],['storageFilter','storage'],['foodFilter','food'],['sortFilter','sort']].forEach(([id,k])=>{$('#'+id).value=state[k];$('#'+id).onchange=e=>{state[k]=e.target.value;state.page=1;render()}});$('#clearFilters').onclick=()=>{Object.assign(state,{search:'',category:'',brand:'',storage:'',food:'',sort:'az',page:1});document.querySelectorAll('.filters input,.filters select').forEach(x=>x.value='');$('#sortFilter').value='az';$('#productSearch').value='';render()};render()}document.addEventListener('DOMContentLoaded',()=>{if($('#productGrid'))initProducts();});
+const state = {
+  search: "",
+  category: "",
+  brand: "",
+  storage: "",
+  food: "",
+  sort: "az",
+  page: 1,
+  perPage: 12,
+};
+const $ = (s) => document.querySelector(s);
+function productCard(p) {
+  const pack = p.packSizes.join(", ");
+  const msg = `Hello, I would like to enquire about ${p.productName}, ${p.brand}, ${pack}. Page: ${location.href}`;
+  return `<article class="product-card"><a class="product-image" href="product-details.html?slug=${p.slug}"><img loading="lazy" width="600" height="500" src="${p.mainImage}" alt="${p.productName}"></a><div class="product-body"><span class="kicker">${p.brand}</span><h3><a href="product-details.html?slug=${p.slug}">${p.productName}</a></h3><div class="meta">${p.category}</div><div class="badges"><span class="badge">${p.storageType}</span><span class="badge">${p.foodType}</span></div><div class="meta">Packs: ${pack}</div><div class="card-actions"><a class="btn btn-outline" href="product-details.html?slug=${p.slug}">View Details</a><a class="btn btn-primary" target="_blank" rel="noopener" href="${wa(msg)}">WhatsApp</a></div></div></article>`;
+}
+function filtered() {
+  let list = [...PRODUCTS];
+  const q = state.search.toLowerCase();
+  if (q)
+    list = list.filter((p) =>
+      [p.productName, p.brand, p.category, p.productCode, ...p.keywords]
+        .join(" ")
+        .toLowerCase()
+        .includes(q),
+    );
+  if (state.category)
+    list = list.filter((p) => p.categorySlug === state.category);
+  if (state.brand) list = list.filter((p) => p.brand === state.brand);
+  if (state.storage) list = list.filter((p) => p.storageType === state.storage);
+  if (state.food) list = list.filter((p) => p.foodType === state.food);
+  list.sort((a, b) =>
+    state.sort === "za"
+      ? b.productName.localeCompare(a.productName)
+      : state.sort === "new"
+        ? Number(b.isNew) - Number(a.isNew)
+        : state.sort === "featured"
+          ? Number(b.isFeatured) - Number(a.isFeatured)
+          : a.productName.localeCompare(b.productName),
+  );
+  return list;
+}
+function render() {
+  const list = filtered(),
+    pages = Math.max(1, Math.ceil(list.length / state.perPage));
+  state.page = Math.min(state.page, pages);
+  const items = list.slice(
+    (state.page - 1) * state.perPage,
+    state.page * state.perPage,
+  );
+  $("#productGrid").innerHTML = items.length
+    ? items.map(productCard).join("")
+    : '<div class="empty" style="grid-column:1/-1"><h3>No products found</h3><p>Try removing some filters or searching a different term.</p></div>';
+  $("#resultCount").textContent =
+    `Showing ${items.length} of ${list.length} products`;
+  $("#pagination").innerHTML = Array.from(
+    { length: pages },
+    (_, i) =>
+      `<button class="${state.page === i + 1 ? "active" : ""}" data-page="${i + 1}">${i + 1}</button>`,
+  ).join("");
+  $("#pagination")
+    .querySelectorAll("button")
+    .forEach(
+      (b) =>
+        (b.onclick = () => {
+          state.page = +b.dataset.page;
+          render();
+          scrollTo({ top: 300, behavior: "smooth" });
+        }),
+    );
+}
+function initProducts() {
+  const catSel = $("#categoryFilter"),
+    brandSel = $("#brandFilter");
+  CATEGORIES.forEach((c) =>
+    catSel.insertAdjacentHTML(
+      "beforeend",
+      `<option value="${c.slug}">${c.name}</option>`,
+    ),
+  );
+  [...new Set(PRODUCTS.map((p) => p.brand))]
+    .sort()
+    .forEach((b) =>
+      brandSel.insertAdjacentHTML("beforeend", `<option>${b}</option>`),
+    );
+  const params = new URLSearchParams(location.search);
+  if (params.get("category")) state.category = params.get("category");
+  if (params.get("brand")) state.brand = params.get("brand");
+  let timer;
+  $("#productSearch").oninput = (e) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      state.search = e.target.value;
+      state.page = 1;
+      render();
+    }, 250);
+  };
+  [
+    ["categoryFilter", "category"],
+    ["brandFilter", "brand"],
+    ["storageFilter", "storage"],
+    ["foodFilter", "food"],
+    ["sortFilter", "sort"],
+  ].forEach(([id, k]) => {
+    $("#" + id).value = state[k];
+    $("#" + id).onchange = (e) => {
+      state[k] = e.target.value;
+      state.page = 1;
+      render();
+    };
+  });
+  $("#clearFilters").onclick = () => {
+    Object.assign(state, {
+      search: "",
+      category: "",
+      brand: "",
+      storage: "",
+      food: "",
+      sort: "az",
+      page: 1,
+    });
+    document
+      .querySelectorAll(".filters input,.filters select")
+      .forEach((x) => (x.value = ""));
+    $("#sortFilter").value = "az";
+    $("#productSearch").value = "";
+    render();
+  };
+  render();
+}
+document.addEventListener("DOMContentLoaded", () => {
+  if ($("#productGrid")) initProducts();
+});

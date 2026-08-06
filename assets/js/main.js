@@ -1,1 +1,41 @@
-const COMPANY={phone:'+91 98765 43210',whatsapp:'919876543210',email:'sales@polarfoods.example'};function wa(text){return `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(text)}`}function shared(){document.querySelectorAll('[data-phone]').forEach(a=>a.href='tel:'+COMPANY.phone.replace(/\s/g,''));document.querySelectorAll('[data-wa]').forEach(a=>a.href=wa(a.dataset.message||'Hello, I would like to enquire about your dairy and frozen-food products.'));document.querySelector('.menu-btn')?.addEventListener('click',()=>document.querySelector('.navlinks').classList.toggle('open'));document.querySelector('.filter-toggle')?.addEventListener('click',()=>document.querySelector('.filters').classList.add('open'));document.querySelector('.filter-close')?.addEventListener('click',()=>document.querySelector('.filters').classList.remove('open'));document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear())}document.addEventListener('DOMContentLoaded',shared);
+const COMPANY = {
+  phone: "+91 98765 43210",
+  whatsapp: "919876543210",
+  email: "sales@polarfoods.example",
+};
+function wa(text) {
+  return `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(text)}`;
+}
+function shared() {
+  document
+    .querySelectorAll("[data-phone]")
+    .forEach((a) => (a.href = "tel:" + COMPANY.phone.replace(/\s/g, "")));
+  document
+    .querySelectorAll("[data-wa]")
+    .forEach(
+      (a) =>
+        (a.href = wa(
+          a.dataset.message ||
+            "Hello, I would like to enquire about your dairy and frozen-food products.",
+        )),
+    );
+  document
+    .querySelector(".menu-btn")
+    ?.addEventListener("click", () =>
+      document.querySelector(".navlinks").classList.toggle("open"),
+    );
+  document
+    .querySelector(".filter-toggle")
+    ?.addEventListener("click", () =>
+      document.querySelector(".filters").classList.add("open"),
+    );
+  document
+    .querySelector(".filter-close")
+    ?.addEventListener("click", () =>
+      document.querySelector(".filters").classList.remove("open"),
+    );
+  document
+    .querySelectorAll("[data-year]")
+    .forEach((e) => (e.textContent = new Date().getFullYear()));
+}
+document.addEventListener("DOMContentLoaded", shared);
