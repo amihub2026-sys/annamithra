@@ -38,8 +38,10 @@
 
 </a>
             <nav class="navlinks"><a href="index.html">Home</a><a href="about.html">About</a><a
-                    href="products.html">Products</a><a href="brands.html">Brands</a><a
-                    href="industries.html">Industries</a><a href="infrastructure.html">Infrastructure</a><a
+                    href="products.html">Products</a><a href="brands.html">Brands</a>
+                    <!-- <a
+                    href="industries.html">Industries</a><a href="infrastructure.html">Infrastructure</a> -->
+                    <a
                     href="contact.html">Contact</a></nav>
             <div class="nav-actions"><a class="btn btn-outline" data-phone>Call Now</a><a class="btn btn-primary"
                     data-wa>WhatsApp</a></div><button class="menu-btn" aria-label="Open menu">☰</button>
@@ -91,11 +93,21 @@
         </section>
     </main>
     <script>document.addEventListener('DOMContentLoaded', () => contactForm.onsubmit = e => { e.preventDefault(); const vals = [...contactForm.querySelectorAll('input,select,textarea')].map(x => x.value); open(wa(`Bulk enquiry: Name ${vals[0]}, Business ${vals[1]}, Phone ${vals[2]}, Customer type ${vals[4]}, City ${vals[5]}, Category ${vals[6]}, Quantity ${vals[7]}, Message ${vals[8]}`), '_blank') })</script>
-    <footer class="footer">
+<footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div><a class="logo" href="index.html" style="color:white"><span
-                            class="logo-mark">AM</span>AnnaMithra</a>
+                <div><a class="logo" href="index.html">
+
+    <img src="assets/images/ama.png" 
+         alt="AnnaMithra Logo" 
+         class="logo-img">
+
+    <span class="logo-text">
+        <span class="brand-blue">AnnaMithra</span>
+        <span class="brand-green"> Agencies</span>
+    </span>
+
+</a>
                     <p>Professional dairy and frozen-food distribution for hotels, restaurants, bakeries, retailers and
                         institutional kitchens.</p>
                 </div>
@@ -118,7 +130,8 @@
                         href="privacy-policy.html" style="display:inline">Privacy</a> · <a href="terms.html"
                         style="display:inline">Terms</a></span></div>
         </div>
-    </footer><a class="floating-wa" data-wa aria-label="WhatsApp">WA</a>
+    </footer>
+    <a class="floating-wa" data-wa aria-label="WhatsApp">WA</a>
     <div class="mobile-bar"><a data-phone>☎<br>Call</a><a data-wa>WA<br>WhatsApp</a><a
             href="products.html">▦<br>Products</a></div>
     <script src="assets/js/main.js"></script>

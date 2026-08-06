@@ -1,6 +1,6 @@
 :root {
-    --navy: #1061da;
-    --navy2: #102f4d;
+    --navy: #006B70;
+    --navy2: #005B60;
     --green: #1e5a46;
     --green2: #2d745b;
     --ice: #eaf4f6;
@@ -1425,4 +1425,239 @@ textarea.form-control {
     text-shadow:
         0 2px 10px rgba(0, 0, 0, .3),
         0 0 12px rgba(255, 216, 77, .12);
+}
+/* =========================
+   PRODUCT CATALOGUE VIDEO HERO
+========================= */
+
+.product-video-hero {
+    position: relative;
+    width: 100%;
+    height: 520px;
+
+    overflow: hidden;
+    background: #000;
+}
+
+.product-hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.product-video-logo-cover {
+    position: absolute;
+
+    right: 42px;
+    bottom: 30px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    z-index: 3;
+    pointer-events: none;
+}
+
+.product-video-logo-cover img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+}
+/* =========================
+   ABOUT PAGE VIDEO HERO
+========================= */
+
+.about-video-hero {
+    position: relative;
+    width: 100%;
+    height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    background: #000;
+
+    color: #ffffff;
+}
+
+.about-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-video-overlay{
+    display:none;
+}
+
+.about-video-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+}
+
+.about-video-content .breadcrumbs {
+    margin-bottom: 22px;
+
+    color: rgba(255, 255, 255, .72);
+}
+
+.about-video-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color: #ffd84d;
+
+    font-size: .8rem;
+    font-weight: 850;
+
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.about-video-kicker::before{
+    content:"";
+    width:38px;
+    height:2px;
+    background:#ffd84d;
+}
+
+.about-video-content h1 {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(3rem, 5.5vw, 5.7rem);
+    font-weight: 900;
+
+    line-height: .98;
+    letter-spacing: -.055em;
+
+    text-shadow:
+        0 12px 38px rgba(0, 0, 0, .45);
+}
+
+.about-video-content h1 span {
+    display: block;
+
+    color: #c9f2df;
+}
+
+.about-video-content p {
+    max-width: 650px;
+
+    margin: 24px 0 0;
+
+    color: rgba(255, 255, 255, .82);
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    text-shadow:
+        0 3px 12px rgba(0, 0, 0, .38);
+}
+
+.about-video-logo-cover{
+    position:absolute;
+    right:42px;
+    bottom:30px;
+    width:60px;
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:transparent;
+    border:none;
+    box-shadow:none;
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+
+    z-index:3;
+}
+
+.about-video-logo-cover img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+}
+.about-sound-btn {
+    position: absolute;
+    left: 32px;
+    bottom: 28px;
+    z-index: 5;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px 16px;
+
+    border: 1px solid rgba(255, 255, 255, .55);
+    border-radius: 999px;
+
+    background: rgba(0, 0, 0, .28);
+    color: #ffffff;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    font-size: .82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease;
+}
+
+.about-sound-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, .48);
+    border-color: rgba(255, 255, 255, .85);
+}
+
+.about-sound-btn.sound-on {
+    background: rgba(30, 90, 70, .88);
+}
+
+.about-sound-btn .sound-icon {
+    font-size: 1rem;
+    line-height: 1;
 }
