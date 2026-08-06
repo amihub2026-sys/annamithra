@@ -1,7 +1,7 @@
 const COMPANY = {
-  phone: "+91 98765 43210",
+  phone: "+91 7373373030",
   whatsapp: "919876543210",
-  email: "sales@polarfoods.example",
+  email: "annamithraagenciesmdu@gmail.com",
 };
 function wa(text) {
   return `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(text)}`;
