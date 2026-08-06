@@ -15,7 +15,7 @@ window.PRODUCTS = [
     fullDescription:
       "Full Cream Milk is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=80",
+      "https://png.pngtree.com/png-clipart/20240619/original/pngtree-a-bottle-in-fresh-splash-milk-png-image_15366664.png",
     galleryImages: [],
     packSizes: ["500 ml", "1 L"],
     storageType: "Chilled",
@@ -44,7 +44,7 @@ window.PRODUCTS = [
     fullDescription:
       "Toned Milk is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=80",
+      "https://png.pngtree.com/png-clipart/20240619/original/pngtree-a-bottle-in-fresh-splash-milk-png-image_15366664.png",
     galleryImages: [],
     packSizes: ["500 ml", "1 L"],
     storageType: "Chilled",
@@ -73,7 +73,7 @@ window.PRODUCTS = [
     fullDescription:
       "Fresh Curd is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=80",
+      "https://png.pngtree.com/png-clipart/20240619/original/pngtree-a-bottle-in-fresh-splash-milk-png-image_15366664.png",
     galleryImages: [],
     packSizes: ["400 g", "1 kg", "5 kg"],
     storageType: "Chilled",
@@ -107,7 +107,7 @@ window.PRODUCTS = [
     fullDescription:
       "Cooking Paneer is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=900&q=80",
+      "https://t3.ftcdn.net/jpg/06/70/37/06/360_F_670370665_ERcQGr1RR6xn3Zmx2Q3q2JpmHUw0xfhb.jpg",
     galleryImages: [],
     packSizes: ["200 g", "1 kg"],
     storageType: "Chilled",
@@ -136,7 +136,7 @@ window.PRODUCTS = [
     fullDescription:
       "Malai Paneer is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=900&q=80",
+      "https://t3.ftcdn.net/jpg/06/70/37/06/360_F_670370665_ERcQGr1RR6xn3Zmx2Q3q2JpmHUw0xfhb.jpg",
     galleryImages: [],
     packSizes: ["200 g", "1 kg"],
     storageType: "Chilled",
@@ -165,7 +165,7 @@ window.PRODUCTS = [
     fullDescription:
       "Pizza Mozzarella is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=900&q=80",
+      "https://t3.ftcdn.net/jpg/06/70/37/06/360_F_670370665_ERcQGr1RR6xn3Zmx2Q3q2JpmHUw0xfhb.jpg",
     galleryImages: [],
     packSizes: ["1 kg", "2 kg"],
     storageType: "Chilled",
@@ -194,7 +194,7 @@ window.PRODUCTS = [
     fullDescription:
       "Processed Cheese Slices is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=900&q=80",
+      "https://t3.ftcdn.net/jpg/06/70/37/06/360_F_670370665_ERcQGr1RR6xn3Zmx2Q3q2JpmHUw0xfhb.jpg",
     galleryImages: [],
     packSizes: ["200 g", "750 g"],
     storageType: "Chilled",
@@ -228,7 +228,7 @@ window.PRODUCTS = [
     fullDescription:
       "Table Butter is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?auto=format&fit=crop&w=900&q=80",
+      "https://png.pngtree.com/png-vector/20250513/ourmid/pngtree-a-block-of-yellow-butter-on-wooden-plate-with-knife-png-image_16260382.png",
     galleryImages: [],
     packSizes: ["100 g", "500 g"],
     storageType: "Chilled",
@@ -635,7 +635,7 @@ window.PRODUCTS = [
     fullDescription:
       "Paneer Tikka Bites is selected for consistent performance in restaurants, bakeries, caf\u00e9s, retailers and institutional kitchens. Contact our team for current availability, suitable pack size and bulk-supply details.",
     mainImage:
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80",
+      "https://t3.ftcdn.net/jpg/06/70/37/06/360_F_670370665_ERcQGr1RR6xn3Zmx2Q3q2JpmHUw0xfhb.jpg",
     galleryImages: [],
     packSizes: ["1 kg"],
     storageType: "Frozen",
