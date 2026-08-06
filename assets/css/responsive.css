@@ -75,14 +75,20 @@
     .topbar-links span:nth-child(n+2) {
         display: none
     }
+.hero {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 16 / 9;
+}
 
-    .hero {
-        min-height: 610px
-    }
-
-    .hero-content {
-        padding: 65px 0
-    }
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
 
     .trust-row {
         grid-template-columns: repeat(2, 1fr)
@@ -218,13 +224,20 @@
     }
 
 }
-@media(max-width:760px){
+@media(max-width:760px) {
+.hero-logo-cover {
+    right: 8px;
+    bottom: 8px;
 
-    .hero-slide{
+    width: 54px;
+    height: 54px;
 
-        background-size: cover;
-        background-position: center center;
+    border-radius: 12px;
+}
 
-    }
+.hero-logo-cover img {
+    width: 38px;
+    height: 38px;
+}
 
 }
