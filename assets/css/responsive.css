@@ -796,5 +796,15 @@
     min-height: 225px;
     padding: 22px 19px;
 }
+/* PRODUCT DETAILS HERO MOBILE */
+
+@media (max-width:760px){
+
+    .product-detail-hero{
+        min-height:360px;
+        background-position:center;
+    }
+
+}
 }
 
