@@ -2243,3 +2243,33 @@ textarea.form-control {
     position:relative;
     z-index:2;
 }
+/* =====================================
+   CONTACT HERO
+===================================== */
+
+.contact-hero{
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.15),
+            rgba(0,0,0,.15)
+        ),
+        url("../images/contact-header.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.brands-hero{
+    width:100%;
+    overflow:hidden;
+}
+
+.brands-hero-image{
+    display:block;
+    width:100%;
+    height:auto;
+}
