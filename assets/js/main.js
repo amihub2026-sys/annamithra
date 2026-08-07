@@ -73,3 +73,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const valuesSection = document.querySelector(".company-values-section");
+
+    if (!valuesSection) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    valuesSection.classList.add("is-visible");
+                    observer.unobserve(valuesSection);
+                }
+            });
+        },
+        {
+            threshold: 0.35
+        }
+    );
+
+    observer.observe(valuesSection);
+});

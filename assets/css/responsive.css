@@ -80,25 +80,148 @@
 .cinematic-stat-item:nth-child(-n+2) {
     border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
-/* ABOUT STORY — TABLET */
+/* =========================
+   ABOUT PAGE — COMPANY
+========================= */
 
-.about-story-grid {
-    grid-template-columns: 1fr;
-    gap: 65px;
+.company-about-section {
+    padding: 80px 0;
 }
 
-.about-story-visual {
+.company-about-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+}
+
+.company-about-visual {
     width: min(720px, 100%);
+    min-height: 520px;
     margin: 0 auto;
 }
 
-.about-story-content {
+.company-about-content {
     max-width: 850px;
 }
 
-.about-why-grid {
+
+/* =========================
+   VISION & MISSION
+========================= */
+
+.company-vision-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+
+.company-purpose-card {
+    min-height: 290px;
+}
+
+
+/* =========================
+   ASSOCIATED WITH
+========================= */
+
+.company-associations-grid {
     grid-template-columns: repeat(2, 1fr);
+}
+/* =========================
+   CORE VALUES
+========================= */
+
+.core-value-flow {
+    max-width: 900px;
+    height: 620px;
+}
+
+.core-value-point {
+    width: 210px;
+}
+
+.core-value-point-1 {
+    left: 25px;
+    top: 70px;
+}
+
+.core-value-point-2 {
+    left: 27%;
+    top: 180px;
+}
+
+.core-value-point-3 {
+    left: 55%;
+    top: 280px;
+}
+
+.core-value-point-4 {
+    right: 10px;
+    top: 370px;
+}
+
+.core-value-number {
+    font-size: 3rem;
+}
+
+.core-value-point h3 {
+    font-size: 1rem;
+}
+
+.core-value-point p {
+    font-size: .8rem;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.company-process-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
+}
+
+.company-process-step {
+    height: 300px;
+    min-height: 300px;
+}
+
+
+/* =========================
+   FUTURE PLAN
+========================= */
+
+.future-radial-wrap {
+    max-width: 900px;
+    height: 920px;
+}
+
+.future-center {
+    width: 210px;
+    height: 210px;
+}
+
+.future-center h3 {
+    font-size: 1.7rem;
+}
+
+.future-node {
+    width: 205px;
+}
+
+.future-node-1 {
+    left: 150px;
+}
+
+.future-node-2 {
+    right: 150px;
+}
+
+.future-node-5 {
+    right: 150px;
+}
+
+.future-node-6 {
+    left: 150px;
 }
 }
 
@@ -496,6 +619,458 @@
 .about-sound-btn .sound-icon {
     font-size: .9rem;
 }
+/* =========================
+   PRODUCT DETAILS PAGE
+========================= */
+
+.product-detail-hero {
+    min-height: 360px;
+    background-position: center;
+}
+
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-hero {
+    background-position: center;
+}
+/* =========================
+   ABOUT PAGE — COMPANY
+========================= */
+
+.company-about-section {
+    padding: 58px 0;
+}
+
+.company-about-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+}
+
+.company-about-visual {
+    width: 100%;
+    min-height: 390px;
+}
+
+.company-about-image-main {
+    width: calc(100% - 38px);
+    height: 345px;
+    border-radius: 20px;
+}
+
+.company-about-image-small {
+    width: 145px;
+    height: 170px;
+    border-radius: 17px;
+}
+
+.company-about-image-small img {
+    border-radius: 13px;
+}
+
+.company-about-content h1,
+.company-about-content h2 {
+    margin: 8px 0 18px;
+    font-size: 2.15rem;
+    line-height: 1.08;
+}
+
+.company-about-content > p {
+    margin-bottom: 14px;
+    font-size: .88rem;
+    line-height: 1.75;
+}
+
+.company-infrastructure-note {
+    margin-top: 22px;
+    padding: 18px;
+}
+
+
+/* =========================
+   VISION & MISSION
+========================= */
+
+.company-vision-mission-section {
+    padding: 58px 0;
+    background-position: center;
+}
+
+.company-vision-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.company-purpose-card {
+    min-height: 270px;
+    padding: 26px 22px;
+    border-radius: 16px;
+}
+
+.company-purpose-label {
+    font-size: .64rem;
+}
+
+.company-purpose-card h2,
+.company-purpose-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.45rem;
+    line-height: 1.22;
+}
+
+.company-purpose-card p {
+    font-size: .84rem;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ASSOCIATED WITH
+========================= */
+
+.company-associations-section {
+    padding: 58px 0;
+}
+
+.company-associations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.company-association-card {
+    min-height: 92px;
+    padding: 17px 15px;
+    border-radius: 14px;
+}
+
+.company-association-card span {
+    font-size: .82rem;
+}
+/* =========================
+   CORE VALUES
+========================= */
+
+
+/* MOBILE CORE VALUE WAVE */
+
+.core-value-flow {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    padding: 20px 0 10px 58px;
+}
+.core-value-flow::before {
+    content: "";
+
+    position: absolute;
+
+    left: 22px;
+    top: 25px;
+
+    width: 5px;
+    height: calc(100% - 55px);
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        180deg,
+        #2997ff 0%,
+        #ff8a00 34%,
+        #32d17d 68%,
+        #007f7d 100%
+    );
+
+    transform: scaleY(0);
+    transform-origin: top;
+
+    z-index: 1;
+}
+.company-values-section.is-visible .core-value-flow::before {
+    animation: mobileValueLineGrow 2.6s ease forwards;
+}
+
+@keyframes mobileValueLineGrow {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+/* SHOW SVG WAVE ON MOBILE */
+/* VALUES APPEAR ONE BY ONE */
+
+.company-values-section.is-visible .core-value-point-1 {
+    animation: mobileValueReveal .6s ease .25s forwards;
+}
+
+.company-values-section.is-visible .core-value-point-2 {
+    animation: mobileValueReveal .6s ease .9s forwards;
+}
+
+.company-values-section.is-visible .core-value-point-3 {
+    animation: mobileValueReveal .6s ease 1.55s forwards;
+}
+
+.company-values-section.is-visible .core-value-point-4 {
+    animation: mobileValueReveal .6s ease 2.2s forwards;
+}
+
+@keyframes mobileValueReveal {
+    from {
+        opacity: 0;
+        transform: translateX(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.core-value-path {
+    display: none;
+}
+/* VALUE CONTENT */
+
+
+/* 01 */
+.core-value-point,
+.core-value-point-1,
+.core-value-point-2,
+.core-value-point-3,
+.core-value-point-4 {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 0 0 48px;
+
+    z-index: 3;
+}
+
+/* DOT */
+
+.core-value-point .core-value-marker {
+    position: absolute;
+
+    left: -45px;
+    top: 7px;
+
+    width: 18px;
+    height: 18px;
+
+    border: 4px solid #fff;
+
+    z-index: 5;
+}
+/* NUMBER */
+
+.core-value-number {
+    margin: 0 0 8px;
+
+    font-size: 2.6rem;
+    line-height: .9;
+
+    opacity: .35;
+}
+
+
+/* TITLE */
+
+.core-value-point h3 {
+    margin: 0 0 7px;
+
+    font-size: 1rem;
+}
+
+
+/* TEXT */
+
+.core-value-point p {
+    margin: 0;
+
+    max-width: 260px;
+
+    font-size: .8rem;
+    line-height: 1.6;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.company-process-section {
+    padding: 58px 0;
+}
+
+.company-process-flow {
+    display: flex;
+
+    gap: 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 5px 14px 20px;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.company-process-flow::-webkit-scrollbar {
+    display: none;
+}
+
+.company-process-step {
+    flex: 0 0 82vw;
+
+    width: 82vw;
+    min-width: 82vw;
+
+    height: 330px;
+    min-height: 330px;
+
+    scroll-snap-align: center;
+}
+
+.company-process-card-face {
+    padding: 25px 21px;
+}
+
+
+/* =========================
+   FUTURE PLAN
+========================= */
+
+.company-future-section {
+    padding: 58px 0 68px;
+}
+
+.future-radial-wrap {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.future-radial-wrap::before,
+.future-radial-wrap::after,
+.future-radial-lines {
+    display: none;
+}
+
+.future-center {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    transform: none;
+
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+
+    margin-bottom: 10px;
+
+    padding: 24px 20px;
+
+    border-radius: 22px;
+}
+
+.future-center h3 {
+    font-size: 1.75rem;
+}
+
+.future-center p {
+    max-width: 250px;
+}
+
+.future-node,
+.future-node-1,
+.future-node-2,
+.future-node-3,
+.future-node-4,
+.future-node-5,
+.future-node-6,
+.future-node-7,
+.future-node-8 {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+
+    width: 100%;
+    min-height: auto;
+
+    padding: 18px;
+
+    border-radius: 16px;
+}
+
+.future-node-head {
+    gap: 12px;
+}
+
+.future-node-number {
+    flex: 0 0 40px;
+
+    width: 40px;
+    height: 40px;
+}
+
+.future-node h3 {
+    font-size: .94rem;
+}
+
+.future-node-content {
+    max-height: none;
+    overflow: visible;
+
+    margin-top: 10px;
+
+    opacity: 1;
+}
+
+.future-node-content p {
+    margin-top: 8px;
+
+    font-size: .78rem;
+    line-height: 1.6;
+}
+
+.future-node:hover {
+    transform: none;
+}
 }
 
 @media(max-width:390px) {
@@ -592,230 +1167,131 @@
 .about-sound-btn .sound-text {
     font-size: .7rem;
 }
+/* =========================
+   COMPANY ABOUT — SMALL MOBILE
+========================= */
 
-
-/* OUR STORY */
-
-.about-story-section {
-    padding: 72px 0;
+.company-about-section {
+    padding: 48px 0;
 }
 
-.about-story-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 48px;
+.company-about-visual {
+    min-height: 350px;
 }
 
-.about-story-visual {
-    min-height: 420px;
+.company-about-image-main {
+    width: calc(100% - 25px);
+    height: 305px;
 }
 
-.about-story-image-main {
-    width: calc(100% - 34px);
-    height: 370px;
+.company-about-image-small {
+    width: 122px;
+    height: 145px;
 }
 
-.about-story-image-main img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.about-story-image-small {
-    width: 145px;
-    height: 175px;
-
-    right: 0;
-    bottom: -18px;
-}
-
-.about-story-image-small img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.about-story-badge {
-    left: 12px;
-    bottom: 12px;
-
-    width: 165px;
-    padding: 15px;
-}
-
-.about-story-badge strong {
-    font-size: 1rem;
-}
-
-.about-story-badge span {
-    font-size: .7rem;
-    line-height: 1.45;
-}
-
-.about-section-kicker {
-    font-size: .68rem;
-    letter-spacing: .11em;
-}
-
-.about-story-content h2 {
-    margin-top: 12px;
-    font-size: clamp(2rem, 9vw, 3rem);
-    line-height: 1.05;
-}
-
-.about-story-content > p {
-    font-size: .9rem;
-    line-height: 1.75;
-}
-
-.about-story-points {
-    margin-top: 28px;
-}
-
-.about-story-point {
-    grid-template-columns: 42px 1fr;
-    gap: 14px;
-
-    padding: 18px 0;
-}
-
-.story-point-number {
-    width: 42px;
-    height: 42px;
-
-    font-size: .75rem;
-}
-
-.about-story-point h3 {
-    font-size: 1rem;
-}
-
-.about-story-point p {
-    font-size: .82rem;
-    line-height: 1.6;
-}
-
-.about-story-actions {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-
-    margin-top: 28px;
+.company-about-content h1,
+.company-about-content h2 {
+    font-size: 1.9rem;
 }
 
 
-/* WHY CHOOSE ANNAMITHRA */
+/* =========================
+   VISION & MISSION — SMALL MOBILE
+========================= */
 
-.about-why-section {
-    padding: 72px 0;
+.company-vision-mission-section {
+    padding: 48px 0;
 }
 
-.about-why-heading {
-    margin-bottom: 34px;
-}
-
-.about-why-heading h2 {
-    font-size: clamp(2rem, 9vw, 3rem);
-    line-height: 1.05;
-}
-
-.about-why-heading p {
-    font-size: .9rem;
-    line-height: 1.7;
-}
-
-.about-why-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
-
-.about-why-card {
+.company-purpose-card {
     min-height: 245px;
-    padding: 25px 22px;
+    padding: 23px 19px;
 }
 
-.about-card-number {
-    font-size: 2.6rem;
+.company-purpose-card h2,
+.company-purpose-card h3 {
+    font-size: 1.3rem;
 }
 
-.about-why-card h3 {
-    font-size: 1.15rem;
+
+/* =========================
+   ASSOCIATED WITH — SMALL MOBILE
+========================= */
+
+.company-associations-section {
+    padding: 48px 0;
 }
 
-.about-why-card p {
-    font-size: .86rem;
-    line-height: 1.65;
-}
-.about-video-hero {
-    height: 390px;
-    min-height: 390px;
+.company-associations-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
 
-.about-video-content {
-    padding-bottom: 76px;
+
+
+
+
+/* =========================
+   PROCESS — SMALL MOBILE
+========================= */
+
+.company-process-section {
+    padding: 48px 0;
 }
 
-.about-video-content h1 {
-    font-size: 2.15rem;
+.company-process-flow {
+    gap: 12px;
+    padding-bottom: 18px;
 }
 
-.about-video-content p {
-    max-width: 285px;
-    font-size: .8rem;
+.company-process-step {
+    flex: 0 0 86vw;
+
+    width: 86vw;
+    min-width: 86vw;
+
+    min-height: 315px;
 }
 
-.about-story-section,
-.about-why-section {
-    padding: 58px 0;
-}
-
-.about-story-visual {
-    min-height: 370px;
-}
-
-.about-story-image-main {
-    height: 325px;
-}
-
-.about-story-image-small {
-    width: 125px;
-    height: 150px;
-}
-
-.about-story-badge {
-    width: 145px;
-    padding: 13px;
-}
-
-.about-story-content h2,
-.about-why-heading h2 {
-    font-size: 2rem;
-}
-
-.about-why-card {
-    min-height: 225px;
+.company-process-card-face {
     padding: 22px 19px;
 }
-/* PRODUCT DETAILS HERO MOBILE */
 
-@media (max-width:760px){
 
-    .product-detail-hero{
-        min-height:360px;
-        background-position:center;
-    }
+/* =========================
+   FUTURE PLAN — SMALL MOBILE
+========================= */
 
+.company-future-section {
+    padding: 48px 0 60px;
 }
-/* Contact Hero */
 
-@media (max-width:760px){
+.future-center {
+    min-height: 140px;
+    padding: 21px 17px;
+}
 
-    .contact-hero{
+.future-center h3 {
+    font-size: 1.5rem;
+}
 
-        background-position:center;
+.future-node {
+    padding: 16px;
+}
 
-    }
+.future-node-number {
+    flex: 0 0 38px;
 
+    width: 38px;
+    height: 38px;
+}
+
+.future-node h3 {
+    font-size: .9rem;
+}
+
+.future-node-content p {
+    font-size: .76rem;
 }
 }
 

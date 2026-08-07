@@ -1633,8 +1633,8 @@ textarea.form-control {
     background: rgba(0, 0, 0, .28);
     color: #ffffff;
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
 
     font-size: .82rem;
     font-weight: 800;
@@ -1662,13 +1662,15 @@ textarea.form-control {
     line-height: 1;
 }
 /* ==================================================
-   ABOUT PAGE — SHARED HEADING
+   ANNAMITHRA COMPANY PAGE — SHARED
 ================================================== */
 
-.about-section-kicker {
+.company-section-kicker {
     display: inline-flex;
     align-items: center;
-    gap: 11px;
+    gap: 10px;
+
+    margin-bottom: 14px;
 
     color: var(--green);
 
@@ -1678,7 +1680,7 @@ textarea.form-control {
     text-transform: uppercase;
 }
 
-.about-section-kicker::before {
+.company-section-kicker::before {
     content: "";
 
     width: 38px;
@@ -1688,21 +1690,60 @@ textarea.form-control {
 
     background: linear-gradient(
         90deg,
-        #ffd84d,
-        #ffb800
+        #1061da,
+        var(--green)
     );
+}
 
-    box-shadow:
-        0 0 8px rgba(255, 216, 77, .55),
-        0 0 18px rgba(255, 184, 0, .3);
+.company-section-heading {
+    max-width: 850px;
+    margin-bottom: 48px;
+}
+
+.company-section-heading-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.company-section-heading-center .company-section-kicker {
+    justify-content: center;
+}
+
+.company-section-heading h2 {
+    margin: 0 0 18px;
+
+    color: var(--ink);
+
+    font-size: clamp(2.4rem, 4.5vw, 4.4rem);
+    font-weight: 900;
+
+    line-height: 1.05;
+    letter-spacing: -.05em;
+}
+
+.company-section-heading p {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.company-section-heading-center p {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 /* ==================================================
-   ABOUT PAGE — OUR STORY
+   ABOUT US
 ================================================== */
 
-.about-story-section {
+.company-about-section {
     position: relative;
     overflow: hidden;
 
@@ -1710,118 +1751,83 @@ textarea.form-control {
 
     background:
         radial-gradient(
-            circle at 12% 20%,
+            circle at 10% 15%,
             rgba(0, 107, 112, .08),
-            transparent 30%
+            transparent 28%
         ),
         radial-gradient(
-            circle at 90% 80%,
-            rgba(255, 202, 40, .08),
-            transparent 28%
+            circle at 92% 88%,
+            rgba(30, 90, 70, .08),
+            transparent 30%
         ),
         #ffffff;
 }
 
-.about-story-light {
-    position: absolute;
-
-    border-radius: 50%;
-
-    filter: blur(90px);
-
-    pointer-events: none;
-}
-
-.about-story-light-one {
-    top: -140px;
-    left: -120px;
-
-    width: 360px;
-    height: 360px;
-
-    background: rgba(0, 107, 112, .1);
-}
-
-.about-story-light-two {
-    right: -130px;
-    bottom: -160px;
-
-    width: 380px;
-    height: 380px;
-
-    background: rgba(255, 190, 40, .1);
-}
-
-.about-story-grid {
-    position: relative;
-    z-index: 2;
-
+.company-about-grid {
     display: grid;
     grid-template-columns: .95fr 1.05fr;
+
     align-items: center;
 
-    gap: 85px;
+    gap: 80px;
 }
 
-.about-story-visual {
+.company-about-visual {
     position: relative;
 
-    min-height: 570px;
+    min-height: 560px;
 }
 
-.about-story-image-main {
+.company-about-image {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 30px 70px rgba(10, 34, 57, .16);
+}
+
+.company-about-image-main {
     position: absolute;
 
     top: 0;
     left: 0;
 
-    width: calc(100% - 70px);
-    height: 510px;
-
-    overflow: hidden;
+    width: calc(100% - 65px);
+    height: 500px;
 
     border-radius: 30px;
-
-    box-shadow:
-        0 35px 80px rgba(10, 34, 57, .17);
 }
 
-.about-story-image-main img {
+.company-about-image-main img {
     width: 100%;
     height: 100%;
 
     object-fit: cover;
     object-position: center;
 
-    transition: transform .8s ease;
+    transition: transform .7s ease;
 }
 
-.about-story-visual:hover .about-story-image-main img {
+.company-about-visual:hover .company-about-image-main img {
     transform: scale(1.045);
 }
 
-.about-story-image-small {
+.company-about-image-small {
     position: absolute;
 
     right: 0;
     bottom: 0;
 
     width: 220px;
-    height: 260px;
+    height: 255px;
 
-    overflow: hidden;
-
-    padding: 8px;
+    padding: 7px;
 
     border-radius: 24px;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 24px 55px rgba(10, 34, 57, .18);
 }
 
-.about-story-image-small img {
+.company-about-image-small img {
     width: 100%;
     height: 100%;
 
@@ -1830,418 +1836,890 @@ textarea.form-control {
     border-radius: 18px;
 }
 
-.about-story-badge {
-    position: absolute;
-
-    left: 28px;
-    bottom: 22px;
-
-    width: 205px;
-
-    padding: 20px;
-
-    border: 1px solid rgba(255, 255, 255, .5);
-    border-radius: 18px;
-
-    color: #ffffff;
-
-    background: rgba(0, 70, 75, .7);
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    box-shadow:
-        0 20px 45px rgba(0, 0, 0, .22);
-
-    z-index: 3;
-}
-
-.about-story-badge strong {
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: #ffd84d;
-
-    font-size: 1.25rem;
-    font-weight: 900;
-}
-
-.about-story-badge span {
-    display: block;
-
-    color: rgba(255, 255, 255, .84);
-
-    font-size: .78rem;
-    line-height: 1.55;
-}
-
-.about-story-content h2 {
-    margin: 14px 0 24px;
+.company-about-content h2 {
+    margin: 12px 0 24px;
 
     color: var(--ink);
 
-    font-size: clamp(2.5rem, 4.5vw, 4.6rem);
+    font-size: clamp(2.4rem, 4vw, 4.2rem);
     font-weight: 900;
 
-    line-height: 1.02;
-    letter-spacing: -.055em;
+    line-height: 1.04;
+    letter-spacing: -.05em;
 }
 
-.about-story-content h2 span {
-    display: block;
-
-    color: var(--navy);
+.company-about-content h2 span {
+    color: var(--green);
 }
 
-.about-story-content > p {
-    margin: 0 0 16px;
+.company-about-content > p {
+    margin: 0 0 18px;
 
     color: var(--muted);
 
     font-size: .98rem;
-    line-height: 1.85;
+    line-height: 1.9;
 }
 
-.about-story-points {
+.company-infrastructure-note {
     margin-top: 30px;
 
-    border-top: 1px solid var(--line);
+    padding: 24px 26px;
+
+    border-left: 4px solid var(--green);
+    border-radius: 0 16px 16px 0;
+
+    background: var(--paper);
+
+    box-shadow:
+        0 12px 30px rgba(10, 34, 57, .06);
 }
 
-.about-story-point {
-    display: grid;
-    grid-template-columns: 52px 1fr;
-    align-items: flex-start;
+.company-infrastructure-note strong {
+    display: block;
 
-    gap: 17px;
-
-    padding: 22px 0;
-
-    border-bottom: 1px solid var(--line);
-}
-
-.story-point-number {
-    width: 48px;
-    height: 48px;
-
-    display: grid;
-    place-items: center;
-
-    border: 1px solid rgba(0, 107, 112, .2);
-    border-radius: 50%;
+    margin-bottom: 7px;
 
     color: var(--navy);
-
-    background: rgba(0, 107, 112, .06);
-
-    font-size: .78rem;
-    font-weight: 900;
-}
-
-.about-story-point h3 {
-    margin: 0 0 5px;
-
-    color: var(--ink);
 
     font-size: 1.05rem;
 }
 
-.about-story-point p {
+.company-infrastructure-note p {
     margin: 0;
 
     color: var(--muted);
 
-    font-size: .86rem;
-    line-height: 1.65;
+    font-size: .9rem;
+    line-height: 1.7;
 }
-
-.about-story-actions {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-    gap: 25px;
-
-    margin-top: 34px;
-}
-
-.about-story-link {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 10px;
-
-    color: var(--navy);
-
-    font-weight: 800;
-}
-
-.about-story-link span {
-    transition: transform .3s ease;
-}
-
-.about-story-link:hover span {
-    transform: translateX(7px);
-}
-
-
 /* ==================================================
-   ABOUT PAGE — WHY CHOOSE ANNAMITHRA
+   ANNAMITHRA — VISION & MISSION
+   ONE COMMON BACKGROUND IMAGE
 ================================================== */
 
-.about-why-section {
+.company-vision-mission-section {
     position: relative;
     overflow: hidden;
 
-    padding: 110px 0;
+    padding: 100px 0;
 
-    background:
+    background-image:
         linear-gradient(
-            135deg,
-            #eff4f5 0%,
-            #e7ebeb 56%,
-            #e4e8e8 100%
-        );
+            90deg,
+            rgba(0, 40, 44, .40),
+            rgba(0, 40, 44, .18),
+            rgba(0, 40, 44, .40)
+        ),
+        url("../images/about/vision-mission-bg.png");
 
-    color: #005B60;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    isolation: isolate;
 }
 
-.about-why-section::before {
+
+/* SOFT OVERLAY FOR READABILITY */
+
+.company-vision-mission-section::before {
     content: "";
 
     position: absolute;
     inset: 0;
 
     background:
-        radial-gradient(
-            circle at 15% 10%,
-            rgba(255, 216, 77, .1),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 90% 90%,
-            rgba(143, 196, 255, .12),
-            transparent 30%
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, .08),
+            rgba(0, 55, 58, .12)
         );
 
     pointer-events: none;
+    z-index: -1;
 }
 
-.about-why-heading {
-    position: relative;
-    z-index: 2;
 
-    max-width: 780px;
+/* TWO COLUMN LAYOUT */
 
-    margin-bottom: 50px;
-}
-
-.about-why-heading .about-section-kicker {
-    color: #ffd84d;
-}
-
-.about-why-heading h2 {
-    margin: 14px 0 20px;
-
-    color: #005B60;
-
-    font-size: clamp(2.5rem, 4.5vw, 4.6rem);
-    font-weight: 900;
-
-    line-height: 1.02;
-    letter-spacing: -.055em;
-}
-
-.about-why-heading h2 span {
-    display: block;
-
-    color: #a8e8cf;
-}
-
-.about-why-heading p {
-    max-width: 650px;
-
-    margin: 0;
-
-    color: #005B60;
-
-    line-height: 1.8;
-}
-
-.about-why-grid {
-    position: relative;
-    z-index: 2;
-
+.company-vision-mission-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 18px;
+    gap: 26px;
 }
 
-.about-why-card {
+
+/* CARD */
+
+.company-purpose-card {
     position: relative;
 
     min-height: 330px;
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 
-    overflow: hidden;
+    padding: 34px 36px;
 
-    padding: 30px;
-
-    border: 1px solid rgba(255, 255, 255, .16);
-    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, .28);
+    border-radius: 20px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(255, 255, 255, .12),
-            rgba(255, 255, 255, .04)
+            rgba(255, 255, 255, .88),
+            rgba(248, 252, 251, .82)
         );
 
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
     box-shadow:
-        0 24px 55px rgba(0, 0, 0, .18),
-        inset 0 1px 0 rgba(255, 255, 255, .15);
+        0 22px 55px rgba(0, 35, 38, .16),
+        inset 0 1px 0 rgba(255, 255, 255, .8);
 
     transition:
-        transform .4s ease,
-        border-color .4s ease,
-        background .4s ease,
-        box-shadow .4s ease;
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
 }
 
-.about-why-card::before {
-    content: "";
 
-    position: absolute;
-    inset: 0;
+/* REMOVE OLD CARD BACKGROUND IMAGES */
 
+.company-purpose-card:first-child,
+.company-purpose-card:last-child {
     background:
         linear-gradient(
-            120deg,
-            transparent 20%,
-            rgba(255, 255, 255, .1) 46%,
-            transparent 72%
+            145deg,
+            rgba(255, 255, 255, .90),
+            rgba(247, 251, 250, .84)
         );
-
-    transform: translateX(-120%);
-
-    transition: transform .75s ease;
-
-    pointer-events: none;
 }
 
-.about-why-card:hover {
-    transform: translateY(-10px);
 
-    border-color: rgba(255, 216, 77, .5);
+/* HOVER */
+
+.company-purpose-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 30px 70px rgba(0, 35, 38, .22),
+        inset 0 1px 0 rgba(255, 255, 255, .9);
+}
+
+
+/* REMOVE OLD DECORATIONS */
+
+.company-purpose-card::before,
+.company-purpose-card::after {
+    display: none;
+}
+
+.company-purpose-icon {
+    display: none;
+}
+
+
+/* LABEL */
+
+.company-purpose-label {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    width: fit-content;
+
+    margin-bottom: 14px;
+
+    color: var(--green);
+
+    font-size: .72rem;
+    font-weight: 750;
+
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.company-purpose-label::before {
+    content: "";
+
+    width: 28px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #1061da,
+        var(--green)
+    );
+}
+
+
+/* HEADING */
+
+.company-purpose-card h2,
+.company-purpose-card h3 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 520px;
+
+    margin: 0 0 15px;
+
+    color: var(--ink);
+
+    font-size: clamp(1.55rem, 2.05vw, 2.2rem);
+    font-weight: 600;
+
+    line-height: 1.18;
+    letter-spacing: -.02em;
+}
+
+
+/* DESCRIPTION */
+
+.company-purpose-card p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 580px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: .93rem;
+    line-height: 1.8;
+}
+/* ==================================================
+   ANNAMITHRA — ASSOCIATED WITH
+================================================== */
+
+.company-associations-section {
+    position: relative;
+    overflow: hidden;
+
+padding: 75px 0;
+    background:
+        radial-gradient(
+            circle at 12% 18%,
+            rgba(0, 107, 112, .06),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 88% 80%,
+            rgba(30, 90, 70, .06),
+            transparent 30%
+        ),
+        #ffffff;
+}
+
+
+/* HEADING */
+
+.company-associations-section .company-section-heading {
+    margin-bottom: 42px;
+}
+
+.company-associations-section .company-section-heading h2 {
+    font-size: clamp(2rem, 3.5vw, 3.4rem);
+    font-weight: 650;
+    letter-spacing: -.03em;
+}
+
+.company-associations-section .company-section-heading p {
+    font-size: .95rem;
+}
+
+
+/* GRID */
+
+.company-associations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+/* CARD */
+
+.company-association-card {
+    position: relative;
+    overflow: hidden;
+
+min-height: 110px;
+    display: flex;
+    align-items: center;
+
+    padding: 22px 24px;
+
+    border: 1px solid rgba(0, 107, 112, .12);
+    border-radius: 18px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(255, 255, 255, .17),
-            rgba(255, 255, 255, .06)
+            #ffffff,
+            #f5f9f8
         );
 
     box-shadow:
-        0 32px 70px rgba(0, 0, 0, .26),
-        0 0 26px rgba(255, 216, 77, .08);
+        0 16px 38px rgba(10, 34, 57, .07);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
 }
 
-.about-why-card:hover::before {
-    transform: translateX(120%);
-}
 
-.about-card-number {
-    display: block;
+/* TOP ACCENT */
 
-    margin-bottom: 28px;
+.company-association-card::before {
+    content: "";
 
-    color: #005B60;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    font-size: 3.5rem;
-    font-weight: 900;
-    line-height: 1;
-}
-
-.about-card-line {
-    width: 44px;
-    height: 3px;
-
-    margin-bottom: 22px;
-
-    border-radius: 20px;
+    width: 100%;
+    height: 4px;
 
     background:
         linear-gradient(
             90deg,
-            #ffd84d,
-            #ffb800
+            #1061da,
+            var(--green)
+        );
+}
+
+
+/* SUBTLE BACKGROUND SHAPE */
+
+.company-association-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: -70px;
+    right: -60px;
+
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 107, 112, .10),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+/* TEXT */
+
+.company-association-card span {
+    position: relative;
+    z-index: 2;
+
+    color: var(--navy);
+font-size: .98rem;
+font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+/* HOVER */
+
+.company-association-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(0, 107, 112, .22);
+
+    box-shadow:
+        0 25px 55px rgba(10, 34, 57, .12);
+}
+/* ==================================================
+   ANNAMITHRA — CORE VALUES
+================================================== */
+
+.company-values-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 90px 0;
+
+    background: #f4f7f6;
+}
+
+
+/* HEADING */
+
+.company-values-section .company-section-heading {
+    margin-bottom: 40px;
+}
+
+.company-values-section .company-section-heading h2 {
+    font-size: clamp(2rem, 3.5vw, 3.4rem);
+    font-weight: 650;
+    letter-spacing: -.03em;
+}
+
+
+/* GRID */
+
+.company-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* VALUE CARD */
+
+.company-value-card {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 280px;
+
+    padding: 30px 26px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            #00757a
         );
 
     box-shadow:
-        0 0 12px rgba(255, 216, 77, .6);
+        0 18px 42px rgba(0, 70, 75, .14);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 }
 
-.about-why-card h3 {
-    margin: 0 0 13px;
 
-    color: #005B60;
+/* NUMBER */
 
-    font-size: 1.22rem;
+.company-value-number {
+    position: absolute;
+
+    top: 22px;
+    left: 25px;
+
+    color: rgba(255,255,255,.22);
+
+    font-size: 2.6rem;
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+/* TITLE */
+
+.company-value-card h3 {
+    position: relative;
+
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+
     line-height: 1.3;
 }
 
-.about-why-card p {
-    margin: 0 0 25px;
 
-    color: #005B60;
+/* TEXT */
 
-    font-size: .88rem;
-    line-height: 1.75;
+.company-value-card p {
+    position: relative;
+
+    margin: 0;
+
+    color: rgba(255,255,255,.76);
+
+    font-size: .87rem;
+    font-weight: 400;
+
+    line-height: 1.7;
 }
 
-.about-card-label {
-    display: inline-flex;
 
-    width: fit-content;
-    margin-top: auto;
+/* SMALL ACCENT */
 
-    padding: 7px 11px;
+.company-value-card::before {
+    content: "";
 
-    border: 1px solid rgba(255, 216, 77, .28);
-    border-radius: 50px;
+    position: absolute;
 
-    color: #ffe375;
+    left: 26px;
+    bottom: 0;
 
-    background: rgba(255, 216, 77, .07);
+    width: 55px;
+    height: 3px;
 
-    font-size: .68rem;
-    font-weight: 850;
-    letter-spacing: .08em;
-    text-transform: uppercase;
+    background: #ffffff;
+
+    opacity: .7;
 }
-/* PRODUCT DETAILS HERO IMAGE */
 
-.product-detail-hero{
-    background: url("../images/product-details-header.png");
+
+/* HOVER */
+
+.company-value-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 28px 58px rgba(0, 70, 75, .22);
+}
+/* ==================================================
+   ANNAMITHRA — OUR PROCESS
+================================================== */
+
+.company-process-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 90px 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 35, 38, .42),
+            rgba(0, 35, 38, .42)
+        ),
+        url("../images/about/process-bg.png");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    min-height: 520px;
-    display: flex;
-    align-items: center;
 }
 
-.product-detail-hero .container{
-    position:relative;
-    z-index:2;
+/* HEADING */
+.company-process-section .company-section-heading {
+    position: relative;
+    z-index: 3;
+
+    width: fit-content;
+    max-width: 720px;
+
+    margin: 0 auto 38px;
+    padding: 16px 34px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 18px;
+
+    box-shadow: 0 14px 40px rgba(0, 35, 38, 0.14);
+}
+
+.company-process-section .company-section-heading h2 {
+    font-size: clamp(2rem, 3.5vw, 3.4rem);
+    font-weight: 650;
+    letter-spacing: -.03em;
+}
+
+
+/* PROCESS FLOW */
+
+.company-process-flow {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    width: 100%;
+    gap: 18px;
+}
+
+
+/* CONNECTING LINE */
+
+.company-process-flow::before {
+    content: "";
+
+    position: absolute;
+
+    top: 31px;
+    left: 7%;
+    right: 7%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 107, 112, .35),
+            rgba(30, 90, 70, .55),
+            rgba(0, 107, 112, .35),
+            transparent
+        );
+
+    z-index: 0;
+}
+
+
+/* STEP */
+.company-process-step {
+    position: relative;
+    z-index: 2;
+
+    height: 300px;
+
+    perspective: 1200px;
+
+    cursor: pointer;
+}
+.company-process-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+
+    transition: transform 0.8s cubic-bezier(.2, .75, .25, 1);
+}
+
+.company-process-step:hover .company-process-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* BOTH SIDES */
+
+.company-process-card-face {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 28px 22px;
+
+    border: 1px solid rgba(255,255,255,.55);
+    border-radius: 20px;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 18px 45px rgba(0,35,38,.16);
+}
+
+
+/* FRONT */
+
+.company-process-card-front {
+    background: rgba(255,255,255,.32);
+}
+
+.company-process-card-front h3 {
+    margin: 20px 0 8px;
+
+    color: #ffffff;
+
+    font-size: 1.05rem;
+    font-weight: 650;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.6);
+}
+
+.process-view-text {
+    color: rgba(255,255,255,.82);
+
+    font-size: .78rem;
+    font-weight: 600;
+
+    letter-spacing: .04em;
+}
+
+
+/* NUMBER */
+
+.company-process-number {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.88);
+
+    color: var(--navy);
+
+    font-size: .84rem;
+    font-weight: 750;
+
+    box-shadow:
+        0 10px 25px rgba(0,35,38,.15);
+}
+
+
+/* BACK */
+
+.company-process-card-back {
+    transform: rotateY(180deg);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0,107,112,.88),
+            rgba(30,90,70,.86)
+        );
+
+    color: #ffffff;
+}
+
+.process-back-number {
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: .78rem;
+    font-weight: 700;
+
+    letter-spacing: .12em;
+}
+
+.company-process-card-back h3 {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.3;
+
+    letter-spacing: -0.01em;
+
+}
+
+.company-process-card-back p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.94);
+
+    font-size: 0.84rem;
+    font-weight: 450;
+    line-height: 1.65;
+
+    text-align: center;
+
+}
+
+.process-back-text {
+    margin-top: 18px;
+
+    color: rgba(255,255,255,.62);
+
+    font-size: .72rem;
+    font-weight: 600;
+}
+
+/* NUMBER */
+
+.company-process-number {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 22px;
+
+    border: 1px solid rgba(0, 107, 112, .22);
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: var(--navy);
+
+    font-size: .86rem;
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 26px rgba(10, 34, 57, .08);
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+/* TITLE */
+
+.company-process-step h3 {
+    margin: 0 0 10px;
+
+    color: var(--ink);
+
+    font-size: 1rem;
+    font-weight: 650;
+
+    line-height: 1.35;
+}
+
+
+/* TEXT */
+
+.company-process-step p {
+    margin: 0;
+
+color: white;
+    font-size: .82rem;
+    line-height: 1.65;
+}
+
+
+/* HOVER */
+
+.company-process-step:hover .company-process-number {
+    transform: translateY(-4px);
+
+    background: var(--navy);
+    color: #ffffff;
 }
 /* =====================================
    CONTACT HERO
@@ -2272,4 +2750,959 @@ textarea.form-control {
     display:block;
     width:100%;
     height:auto;
+}
+/* ==================================================
+   ANNAMITHRA — FUTURE PLAN RADIAL GRAPH
+================================================== */
+
+.company-future-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 100px 0 120px;
+
+    background:
+        radial-gradient(
+            circle at 50% 48%,
+            rgba(0, 107, 112, .08),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f3f8f7 100%
+        );
+}
+
+
+/* HEADING */
+
+.company-future-section .company-section-heading {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.company-future-section .company-section-heading h2 {
+    font-size: clamp(2.3rem, 4vw, 3.7rem);
+    font-weight: 650;
+    letter-spacing: -.035em;
+}
+
+.company-future-section .company-section-heading p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ==================================================
+   RADIAL AREA
+================================================== */
+
+.future-radial-wrap {
+    position: relative;
+
+    width: 100%;
+    max-width: 1180px;
+
+    height: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* OUTER RINGS */
+
+.future-radial-wrap::before,
+.future-radial-wrap::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.future-radial-wrap::before {
+    width: 610px;
+    height: 610px;
+
+    border: 1px solid rgba(0, 107, 112, .16);
+}
+
+.future-radial-wrap::after {
+    width: 470px;
+    height: 470px;
+
+    border: 1px dashed rgba(30, 90, 70, .18);
+}
+
+
+/* ==================================================
+   CENTER CIRCLE
+================================================== */
+
+.future-center {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 5;
+
+    width: 245px;
+    height: 245px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 28px;
+
+    text-align: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            var(--green)
+        );
+
+    color: #ffffff;
+
+    border: 8px solid rgba(255, 255, 255, .88);
+
+    box-shadow:
+        0 25px 65px rgba(0, 75, 80, .26),
+        0 0 0 1px rgba(0, 107, 112, .12);
+}
+
+.future-center-small {
+    margin-bottom: 9px;
+
+    color: rgba(255, 255, 255, .7);
+
+    font-size: .7rem;
+    font-weight: 750;
+
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.future-center h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 2rem;
+    font-weight: 650;
+
+    line-height: 1.05;
+    letter-spacing: -.03em;
+}
+
+.future-center h3 span {
+    display: block;
+
+    color: #d4f4e6;
+}
+
+.future-center p {
+    max-width: 175px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, .8);
+
+    font-size: .76rem;
+    line-height: 1.55;
+}
+
+
+/* ==================================================
+   FUTURE NODES
+================================================== */
+
+.future-node {
+    position: absolute;
+    z-index: 4;
+
+    width: 230px;
+    min-height: 128px;
+
+    padding: 18px 20px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(0, 107, 112, .14);
+
+    box-shadow:
+        0 16px 38px rgba(10, 34, 57, .10);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+    cursor: pointer;
+}
+/* =========================================
+   FUTURE PLAN — BLUE / ORANGE / GREEN
+========================================= */
+
+
+/* BLUE */
+.future-node-1,
+.future-node-4,
+.future-node-6 {
+    background:
+        linear-gradient(
+            145deg,
+            #2997ff 0%,
+            #1267df 100%
+        );
+
+    border-color: rgba(255,255,255,.42);
+
+    box-shadow:
+        0 18px 40px rgba(18,103,223,.22);
+}
+
+
+/* ORANGE */
+.future-node-2,
+.future-node-7 {
+    background:
+        linear-gradient(
+            145deg,
+            #ffb229 0%,
+            #ff7a00 100%
+        );
+
+    border-color: rgba(255,255,255,.42);
+
+    box-shadow:
+        0 18px 40px rgba(255,122,0,.22);
+}
+
+
+/* GREEN */
+.future-node-3,
+.future-node-5,
+.future-node-8 {
+    background:
+        linear-gradient(
+            145deg,
+            #32d17d 0%,
+            #119b58 100%
+        );
+
+    border-color: rgba(255,255,255,.42);
+
+    box-shadow:
+        0 18px 40px rgba(17,155,88,.22);
+}
+/* NODE HEADER */
+
+.future-node-head {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.future-node-number {
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+background: rgba(255,255,255,.18);
+
+border: 1px solid rgba(255,255,255,.45);
+
+color: #ffffff;
+    font-size: .76rem;
+    font-weight: 800;
+}
+
+.future-node h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: .96rem;
+    font-weight: 650;
+
+    line-height: 1.35;
+}
+/* DETAILS — HIDDEN INITIALLY */
+
+.future-node-content {
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height .45s ease,
+        opacity .3s ease,
+        margin .35s ease;
+}
+
+.future-node-content p {
+    margin: 11px 0 0;
+
+    color: rgba(255,255,255,.92);
+
+    font-size: .74rem;
+    line-height: 1.55;
+}
+.future-node-content strong {
+    color: #ffffff;
+}
+
+/* HOVER REVEAL */
+
+.future-node:hover {
+    z-index: 20;
+
+    transform: translateY(-7px) scale(1.04);
+
+
+    box-shadow:
+        0 28px 60px rgba(0, 70, 75, .18);
+}
+
+.future-node:hover .future-node-content {
+    max-height: 240px;
+
+    opacity: 1;
+
+    margin-top: 12px;
+}
+
+
+/* ==================================================
+   NODE POSITIONS
+================================================== */
+
+/* TOP LEFT */
+
+.future-node-1 {
+    top: 35px;
+    left: 245px;
+}
+
+
+/* TOP RIGHT */
+
+.future-node-2 {
+    top: 35px;
+    right: 245px;
+}
+
+
+/* RIGHT UPPER */
+
+.future-node-3 {
+    top: 225px;
+    right: 20px;
+}
+
+
+/* RIGHT LOWER */
+
+.future-node-4 {
+    bottom: 190px;
+    right: 20px;
+}
+
+
+/* BOTTOM RIGHT */
+
+.future-node-5 {
+    bottom: 20px;
+    right: 245px;
+}
+
+
+/* BOTTOM LEFT */
+
+.future-node-6 {
+    bottom: 20px;
+    left: 245px;
+}
+
+
+/* LEFT LOWER */
+
+.future-node-7 {
+    bottom: 190px;
+    left: 20px;
+}
+
+
+/* LEFT UPPER */
+
+.future-node-8 {
+    top: 225px;
+    left: 20px;
+}
+
+
+/* ==================================================
+   CONNECTING LINES
+================================================== */
+
+.future-radial-lines {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.future-line {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 265px;
+    height: 1px;
+
+    transform-origin: 0 50%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 107, 112, .5),
+            rgba(0, 107, 112, .08)
+        );
+}
+
+.future-line::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: var(--navy);
+
+    box-shadow:
+        0 0 12px rgba(0, 107, 112, .45);
+}
+
+
+/* DIRECTIONS */
+
+.future-line-1 {
+    transform: rotate(225deg);
+}
+
+.future-line-2 {
+    transform: rotate(315deg);
+}
+
+.future-line-3 {
+    transform: rotate(0deg);
+}
+
+.future-line-4 {
+    transform: rotate(45deg);
+}
+
+.future-line-5 {
+    transform: rotate(60deg);
+}
+
+.future-line-6 {
+    transform: rotate(120deg);
+}
+
+.future-line-7 {
+    transform: rotate(135deg);
+}
+
+.future-line-8 {
+    transform: rotate(180deg);
+}
+/* ==================================================
+   ANNAMITHRA — CORE VALUES FLOW PATH
+================================================== */
+
+.company-values-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 105px 0 125px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(41, 151, 255, .06),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 82% 72%,
+            rgba(50, 209, 125, .06),
+            transparent 30%
+        ),
+        #f7f9f8;
+}
+
+
+/* HEADING */
+
+.company-values-section .company-section-heading {
+    max-width: 760px;
+    margin-bottom: 70px;
+}
+
+.company-values-section .company-section-heading h2 {
+    margin: 0 0 16px;
+
+    color: var(--ink);
+
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    font-weight: 650;
+
+    line-height: 1.08;
+    letter-spacing: -.035em;
+}
+
+.company-values-section .company-section-heading p {
+    max-width: 680px;
+
+    color: var(--muted);
+
+    font-size: .96rem;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   FLOW AREA
+================================================== */
+
+.core-value-flow {
+    position: relative;
+
+    width: 100%;
+    max-width: 1200px;
+
+    height: 560px;
+
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   SVG CURVED PATH
+================================================== */
+
+.core-value-path {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.core-value-path-base {
+    fill: none;
+
+    stroke: rgba(0, 107, 112, .16);
+
+    stroke-width: 3;
+
+    stroke-linecap: round;
+}
+.core-value-path-active {
+    fill: none;
+
+    stroke: url(#coreValueGradient);
+
+    stroke-width: 9;
+    stroke-linecap: round;
+
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 1400;
+
+    opacity: 0;
+}
+
+.company-values-section.is-visible .core-value-path-active {
+    opacity: 1;
+
+    animation:
+        coreValueDraw 2.8s ease forwards,
+        coreValueFlow 1.2s linear 2.8s infinite;
+}
+
+@keyframes coreValueDraw {
+    from {
+        stroke-dashoffset: 1400;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes coreValueFlow {
+    from {
+        stroke-dasharray: 18 12;
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dasharray: 18 12;
+        stroke-dashoffset: -30;
+    }
+}
+/* ==================================================
+   VALUE POINTS
+================================================== */
+
+.core-value-point {
+    position: absolute;
+
+    z-index: 3;
+
+    width: 245px;
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    animation: coreValueReveal .7s ease forwards;
+}
+
+.core-value-point-1 {
+    left: 35;
+    top: 100px;
+
+    animation-delay: .35s;
+}
+
+.core-value-point-2 {
+    left: 29%;
+    top: 190px;
+
+    animation-delay: .75s;
+}
+
+.core-value-point-3 {
+    left: 57%;
+    top: 270px;
+
+    animation-delay: 1.15s;
+}
+
+.core-value-point-4 {
+    right: 0;
+    top: 330px;
+
+    animation-delay: 1.55s;
+}
+
+@keyframes coreValueReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==================================================
+   MARKERS
+================================================== */
+
+.core-value-marker {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    border: 4px solid #ffffff;
+
+    box-shadow:
+        0 0 0 1px rgba(0,0,0,.07),
+        0 6px 18px rgba(0,0,0,.14);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/* MARKER POSITIONS */
+
+.core-value-point-1 .core-value-marker {
+    top: 7px;
+    right: -26px;
+
+    background: #2997ff;
+}
+
+.core-value-point-2 .core-value-marker {
+    top: 7px;
+    right: -24px;
+
+    background: #ff8a00;
+}
+
+.core-value-point-3 .core-value-marker {
+    top: 7px;
+    right: -24px;
+
+    background: #32d17d;
+}
+
+.core-value-point-4 .core-value-marker {
+    top: 7px;
+    left: -28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2997ff,
+            #32d17d
+        );
+}
+
+
+/* ==================================================
+   NUMBER
+================================================== */
+
+.core-value-number {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 3.4rem;
+    font-weight: 650;
+
+    line-height: .95;
+
+    letter-spacing: -.06em;
+
+    color: rgba(21, 33, 43, .14);
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+.core-value-point-1 .core-value-number {
+    color: rgba(41, 151, 255, .28);
+}
+
+.core-value-point-2 .core-value-number {
+    color: rgba(255, 138, 0, .28);
+}
+
+.core-value-point-3 .core-value-number {
+    color: rgba(50, 209, 125, .30);
+}
+
+.core-value-point-4 .core-value-number {
+    color: rgba(0, 107, 112, .25);
+}
+
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.core-value-point h3 {
+    margin: 0 0 11px;
+
+    color: var(--ink);
+
+    font-size: 1.12rem;
+    font-weight: 650;
+
+    line-height: 1.3;
+
+    letter-spacing: -.015em;
+}
+
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.core-value-point p {
+    max-width: 230px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: .84rem;
+    font-weight: 450;
+
+    line-height: 1.75;
+}
+
+
+/* ==================================================
+   HOVER EFFECT
+================================================== */
+
+.core-value-point:hover .core-value-marker {
+    transform: scale(1.35);
+
+    box-shadow:
+        0 0 0 7px rgba(255,255,255,.8),
+        0 8px 25px rgba(0,0,0,.18);
+}
+
+.core-value-point:hover .core-value-number {
+    transform: translateY(-4px);
+}
+
+.core-value-point:hover h3 {
+    color: var(--navy);
+}
+/* =========================================
+   CORE VALUES — SCROLL SEQUENCE
+========================================= */
+
+.core-value-point {
+    opacity: 0;
+    transform: translateY(28px);
+}
+
+/* 01 */
+.company-values-section.is-visible .core-value-point-1 {
+    animation: coreValuePointReveal .7s ease .35s forwards;
+}
+
+/* 02 */
+.company-values-section.is-visible .core-value-point-2 {
+    animation: coreValuePointReveal .7s ease .95s forwards;
+}
+
+/* 03 */
+.company-values-section.is-visible .core-value-point-3 {
+    animation: coreValuePointReveal .7s ease 1.55s forwards;
+}
+
+/* 04 */
+.company-values-section.is-visible .core-value-point-4 {
+    animation: coreValuePointReveal .7s ease 2.15s forwards;
+}
+
+@keyframes coreValuePointReveal {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================================
+   CORE VALUE NUMBER + DOT ALIGNMENT
+========================================= */
+
+.core-value-point {
+    position: absolute;
+}
+
+/* Keep number and dot visually grouped */
+.core-value-number {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
+}
+.core-value-dot {
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    /* place dot directly above the number */
+    top: -22px;
+    left: 18px;
+
+    transform: none;
+
+    border: 4px solid #fff;
+
+    box-shadow:
+        0 3px 10px rgba(15, 35, 45, 0.18),
+        0 0 0 1px rgba(15, 35, 45, 0.10);
+
+    z-index: 5;
+}
+/* =========================================
+   CORE VALUE — PERFECT NUMBER + DOT ALIGNMENT
+========================================= */
+
+.core-value-point .core-value-marker {
+    top: -22px;
+    left: 18px;
+    right: auto;
+
+    width: 18px;
+    height: 18px;
+
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+
+    box-shadow:
+        0 4px 12px rgba(10, 34, 57, .18),
+        0 0 0 1px rgba(10, 34, 57, .08);
 }
