@@ -806,5 +806,16 @@
     }
 
 }
+/* Contact Hero */
+
+@media (max-width:760px){
+
+    .contact-hero{
+
+        background-position:center;
+
+    }
+
+}
 }
 
