@@ -45,37 +45,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!video || !soundButton) return;
 
-    const icon = soundButton.querySelector(".sound-icon");
-    const text = soundButton.querySelector(".sound-text");
+    const soundIcon = soundButton.querySelector(".sound-icon");
+    const soundText = soundButton.querySelector(".sound-text");
 
     soundButton.addEventListener("click", async () => {
-        try {
-            if (video.muted) {
-                video.muted = false;
-                video.volume = 1;
+        if (video.muted) {
+            video.muted = false;
+            video.volume = 1;
 
+            try {
                 await video.play();
-
-                icon.textContent = "🔇";
-                text.textContent = "Mute Sound";
-                soundButton.classList.add("sound-on");
-                soundButton.setAttribute(
-                    "aria-label",
-                    "Mute video sound"
-                );
-            } else {
-                video.muted = true;
-
-                icon.textContent = "🔊";
-                text.textContent = "Play Sound";
-                soundButton.classList.remove("sound-on");
-                soundButton.setAttribute(
-                    "aria-label",
-                    "Turn on video sound"
-                );
+            } catch (error) {
+                console.error("Video sound error:", error);
             }
-        } catch (error) {
-            console.error("Unable to play About video sound:", error);
+
+            soundButton.classList.add("sound-on");
+
+            if (soundIcon) soundIcon.textContent = "🔇";
+            if (soundText) soundText.textContent = "Mute Sound";
+        } else {
+            video.muted = true;
+
+            soundButton.classList.remove("sound-on");
+
+            if (soundIcon) soundIcon.textContent = "🔊";
+            if (soundText) soundText.textContent = "Play Sound";
         }
     });
 });
