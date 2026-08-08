@@ -74,23 +74,79 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 document.addEventListener("DOMContentLoaded", () => {
-    const valuesSection = document.querySelector(".company-values-section");
 
-    if (!valuesSection) return;
+    const animatedSections = document.querySelectorAll(
+        ".company-about-section, .company-values-section"
+    );
 
-    const observer = new IntersectionObserver(
-        (entries) => {
+    if (!animatedSections.length) return;
+
+    const sectionObserver = new IntersectionObserver(
+        (entries, observer) => {
+
             entries.forEach((entry) => {
+
                 if (entry.isIntersecting) {
-                    valuesSection.classList.add("is-visible");
-                    observer.unobserve(valuesSection);
+
+                    entry.target.classList.add("is-visible");
+
+                    observer.unobserve(entry.target);
                 }
+
             });
+
         },
         {
-            threshold: 0.35
+            threshold: 0.2
         }
     );
 
-    observer.observe(valuesSection);
+    animatedSections.forEach((section) => {
+        sectionObserver.observe(section);
+    });
+
+});
+document.addEventListener("DOMContentLoaded", () => {
+
+    const aboutSection = document.querySelector(".company-about-section");
+    const smoke = document.querySelector(".about-cursor-smoke");
+
+    if (!aboutSection || !smoke) return;
+
+    let currentX = 0;
+    let currentY = 0;
+
+    let targetX = 0;
+    let targetY = 0;
+
+    aboutSection.addEventListener("mousemove", (event) => {
+
+        const rect = aboutSection.getBoundingClientRect();
+
+        targetX = event.clientX - rect.left;
+        targetY = event.clientY - rect.top;
+
+    });
+
+    aboutSection.addEventListener("mouseenter", () => {
+        smoke.style.opacity = "1";
+    });
+
+    aboutSection.addEventListener("mouseleave", () => {
+        smoke.style.opacity = "0";
+    });
+
+    function animateSmoke() {
+
+       currentX += (targetX - currentX) * 0.045;
+currentY += (targetY - currentY) * 0.045;
+
+        smoke.style.left = `${currentX}px`;
+        smoke.style.top = `${currentY}px`;
+
+        requestAnimationFrame(animateSmoke);
+    }
+
+    animateSmoke();
+
 });
