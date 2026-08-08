@@ -1069,7 +1069,8 @@ textarea.form-control {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 18px 0 35px;
+    padding: 45px 0 55px;
+    
 }
 
 .brands-marquee::before,
@@ -1103,17 +1104,27 @@ textarea.form-control {
 
 .brands-track {
     width: max-content;
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    animation: brandScroll 34s linear infinite;
-}
 
+    display: grid;
+
+   grid-template-rows: repeat(2, 130px);
+    grid-auto-flow: column;
+    grid-auto-columns: 210px;
+
+    column-gap: 22px;
+    row-gap: 18px;
+
+    align-items: center;
+
+    transition: transform 1.4s cubic-bezier(.22, 1, .36, 1);
+    will-change: transform;
+}
 .brands-marquee:hover .brands-track {
     animation-play-state: paused;
 }
 
 .brand-logo-card {
+    flex: 0 0 210px;
     width: 210px;
     height: 130px;
 
