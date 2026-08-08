@@ -552,6 +552,80 @@
 .home-about-preview-caption {
     max-width: 310px;
 }
+/* ==================================================
+   PRODUCT CATEGORY PAGE — TABLET
+================================================== */
+
+.product-category-hero {
+    min-height: 390px;
+
+    background-size: cover;
+    background-position: 62% center;
+}
+
+.product-category-hero-inner {
+    width: min(100% - 40px, var(--container));
+    min-height: 390px;
+}
+
+.product-category-breadcrumb {
+    top: 24px;
+
+    font-size: .74rem;
+}
+
+
+/* CATALOGUE */
+
+.category-catalogue-section {
+    padding: 70px 0 85px;
+
+    background-size:
+        100% 100%,
+        620px auto;
+
+    background-position:
+        center,
+        top right;
+}
+
+.category-catalogue-header {
+    margin-bottom: 42px;
+}
+
+.category-catalogue-kicker {
+    font-size: .72rem;
+}
+
+.category-catalogue-header h2 {
+    font-size: 3rem;
+}
+
+
+/* TWO COLUMNS KEEP */
+
+.category-product-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 45px;
+}
+
+.category-product-row {
+    column-gap: 18px;
+
+    padding: 20px 0 23px;
+}
+
+.category-product-name,
+.category-product-size {
+    font-size: .92rem;
+}
+
+.category-product-brand {
+    margin-top: 9px;
+
+    font-size: .76rem;
+}
 }
 
 
@@ -2305,6 +2379,189 @@
     font-size: .7rem;
     line-height: 1.45;
 }
+/* ==================================================
+   PRODUCT CATEGORY PAGE — MOBILE
+================================================== */
+
+/* ==================================================
+   CATEGORY HERO — MOBILE FIX
+================================================== */
+
+/* ==================================================
+   CATEGORY HERO — MOBILE CORRECT FIX
+================================================== */
+
+.product-category-hero {
+    position: relative;
+
+    width: 100%;
+
+    /* REMOVE fixed tall hero */
+    min-height: 0;
+    height: auto;
+
+    /* SHOW COMPLETE IMAGE WIDTH */
+    aspect-ratio: 16 / 9;
+
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    background-color: #ffffff;
+
+    overflow: hidden;
+}
+
+.product-category-hero-inner {
+    position: relative;
+
+    width: 100%;
+    min-height: 0;
+    height: 100%;
+
+    margin: 0;
+}
+
+.product-category-breadcrumb {
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    margin: 0;
+
+    padding: 7px 10px;
+
+    background: rgba(255,255,255,.88);
+
+    border-radius: 6px;
+
+    font-size: .62rem;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+/* ==============================
+   CATALOGUE
+============================== */
+
+.category-catalogue-section {
+    padding: 55px 0 75px;
+
+    background-size:
+        100% 100%,
+        360px auto;
+
+    background-position:
+        center,
+        top right;
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+}
+
+
+/* HEADING */
+
+.category-catalogue-header {
+    width: 100%;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+.category-catalogue-kicker {
+    margin-bottom: 9px;
+
+    font-size: .65rem;
+    letter-spacing: .11em;
+}
+
+.category-catalogue-header h2 {
+    font-size: 2.3rem;
+    line-height: 1;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   ONE PRODUCT PER ROW
+============================== */
+
+.category-product-list {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    column-gap: 0;
+}
+
+
+/* PRODUCT */
+
+.category-product-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    column-gap: 14px;
+
+    padding: 18px 0 20px;
+
+    border-bottom:
+        1px solid rgba(17, 20, 84, .10);
+}
+
+
+/* NAME */
+
+.category-product-name {
+    font-size: .86rem;
+    line-height: 1.4;
+}
+
+
+/* SIZE */
+
+.category-product-size {
+    font-size: .84rem;
+    line-height: 1.4;
+
+    white-space: nowrap;
+}
+
+
+/* BRAND */
+
+.category-product-brand {
+    grid-column: 1 / -1;
+
+    margin-top: 8px;
+
+    font-size: .7rem;
+}
+
+
+/* REMOVE HOVER MOVEMENT */
+
+.category-product-row:hover {
+    padding-left: 0;
+
+    background: transparent;
+}
 }
 
 @media(max-width:390px) {
@@ -2894,6 +3151,83 @@ min-width: 72%;
 
 .home-about-preview-caption small {
     font-size: .64rem;
+}
+/* ==================================================
+   PRODUCT CATEGORY PAGE — SMALL MOBILE
+================================================== */
+
+/* HERO */
+
+.product-category-hero {
+    aspect-ratio: 16 / 9;
+
+    min-height: 0;
+
+    background-size: 100% auto;
+    background-position: center top;
+}
+
+.product-category-hero-inner {
+    min-height: 0;
+}
+
+.product-category-breadcrumb {
+    top: 10px;
+    left: 10px;
+
+    padding: 6px 8px;
+
+    font-size: .56rem;
+}
+
+
+/* CATALOGUE */
+
+.category-catalogue-section {
+    padding: 45px 0 65px;
+
+    background-size:
+        100% 100%,
+        300px auto;
+}
+
+
+/* HEADING */
+
+.category-catalogue-header {
+    margin-bottom: 28px;
+}
+
+.category-catalogue-kicker {
+    font-size: .58rem;
+}
+
+.category-catalogue-header h2 {
+    font-size: 2rem;
+}
+
+
+/* PRODUCT */
+
+.category-product-row {
+    column-gap: 10px;
+
+    padding: 16px 0 18px;
+}
+
+.category-product-name {
+    font-size: .78rem;
+    line-height: 1.42;
+}
+
+.category-product-size {
+    font-size: .76rem;
+}
+
+.category-product-brand {
+    margin-top: 7px;
+
+    font-size: .65rem;
 }
 }
 
