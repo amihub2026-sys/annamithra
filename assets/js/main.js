@@ -150,3 +150,94 @@ currentY += (targetY - currentY) * 0.045;
     animateSmoke();
 
 });
+/* =========================================
+   BRANDS — 2 ROWS + SMOOTH MOVE + PAUSE
+========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const brandMarquee = document.querySelector(".brands-marquee");
+    const brandTrack = document.querySelector(".brands-track");
+
+    if (!brandMarquee || !brandTrack) return;
+
+    const brandCards = Array.from(
+        brandTrack.querySelectorAll(".brand-logo-card")
+    );
+
+    if (!brandCards.length) return;
+
+    // HTML contains the same logo set twice
+    const originalLogoCount = Math.floor(brandCards.length / 2);
+
+    // Two logos are displayed in every horizontal column
+    const originalColumnCount = Math.ceil(originalLogoCount / 2);
+
+    let currentBrandIndex = 0;
+    let brandTimer;
+
+
+    function getBrandStep() {
+
+        const trackStyle = window.getComputedStyle(brandTrack);
+
+        const columnGap =
+            parseFloat(trackStyle.columnGap) || 0;
+
+        return brandCards[0].offsetWidth + columnGap;
+    }
+
+
+    function moveToNextBrand() {
+
+        currentBrandIndex++;
+
+        const distance =
+            currentBrandIndex * getBrandStep();
+
+        brandTrack.style.transform =
+            `translateX(-${distance}px)`;
+
+
+        // Restart after the first complete 2-row logo set
+        if (currentBrandIndex >= originalColumnCount) {
+
+            setTimeout(() => {
+
+                brandTrack.style.transition = "none";
+
+                currentBrandIndex = 0;
+
+                brandTrack.style.transform = "translateX(0)";
+
+                requestAnimationFrame(() => {
+
+                    requestAnimationFrame(() => {
+
+                        brandTrack.style.transition =
+                            "transform 1.4s cubic-bezier(.22, 1, .36, 1)";
+
+                    });
+
+                });
+
+            }, 1450);
+        }
+    }
+
+
+    function startBrandSlider() {
+
+        clearInterval(brandTimer);
+
+        brandTimer = setInterval(() => {
+
+            moveToNextBrand();
+
+        }, 4000);
+    }
+
+
+    startBrandSlider();
+
+});
