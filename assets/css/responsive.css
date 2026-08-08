@@ -223,7 +223,337 @@
 .future-node-6 {
     left: 150px;
 }
+
+
+    .industries-home {
+        padding: 85px 0;
+
+        /* fixed background causes issues on tablets */
+        background-attachment: scroll;
+        background-position: center center;
+    }
+
+    .industries-home-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .industry-home-card {
+        min-height: 260px;
+        padding: 28px;
+    }
+
+    .industries-home .section-head h2 {
+        max-width: 650px;
+        font-size: clamp(2.3rem, 5vw, 3.5rem);
+    }
+    /* =========================
+   SUSTAINABILITY — TABLET
+========================= */
+
+.home-sustainability {
+    min-height: 650px;
+    background-position: 62% center;
 }
+
+.home-sustainability-inner {
+    width: min(100% - 40px, 1180px);
+    padding: 80px 0 65px;
+}
+
+.home-sustainability-content {
+    max-width: 680px;
+}
+
+.home-sustainability-content h2 {
+    font-size: clamp(3rem, 7vw, 4.5rem);
+}
+
+.home-sustainability-content p {
+    max-width: 620px;
+    font-size: 1rem;
+}
+
+.sustainability-timeline {
+    gap: 24px;
+    margin-top: 70px;
+}
+/* =========================================
+   KEY ADVANTAGES — TABLET
+========================================= */
+
+.key-advantages {
+    padding: 75px 0 65px;
+}
+
+.key-advantages .section-head {
+    display: block;
+    width: 100%;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.key-advantages .section-head > div {
+    width: 100%;
+    text-align: center;
+}
+
+.key-advantages .eyebrow {
+    display: block;
+    width: 100%;
+
+    margin-bottom: 12px;
+
+    text-align: center;
+}
+
+.key-advantages .section-head h2 {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    line-height: 1;
+
+    text-align: center;
+}
+
+
+/* THREE COLUMN LAYOUT */
+
+.advantages-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        230px
+        minmax(0, 1fr);
+
+    align-items: stretch;
+}
+
+
+/* LEFT + RIGHT */
+
+.advantage-card {
+    min-height: 350px;
+
+    padding: 45px 28px;
+
+    justify-content: center;
+}
+
+.advantage-card:first-child {
+    padding-left: 0;
+}
+
+.advantage-card:last-child {
+    padding-right: 0;
+}
+
+.advantage-card > span {
+    margin-bottom: 15px;
+
+    font-size: .68rem;
+}
+
+.advantage-card h3 {
+    max-width: 340px;
+
+    margin-bottom: 18px;
+
+    font-size: clamp(1.6rem, 2.8vw, 2.15rem);
+    line-height: 1.1;
+}
+
+.advantage-card p {
+    max-width: 340px;
+
+    font-size: .88rem;
+    line-height: 1.65;
+}
+
+
+/* CENTER IMAGE */
+
+.advantages-center {
+    min-height: 350px;
+}
+
+.advantages-image-wrap {
+    width: 220px;
+    height: 220px;
+}
+
+.advantages-image-wrap::before {
+    width: 190px;
+    height: 190px;
+}
+
+.advantages-image-wrap img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+/* ==================================================
+   BETTER SUPPLY — TABLET
+================================================== */
+
+@media (max-width: 1050px) and (min-width: 761px) {
+
+    .business-features-section {
+        padding: 80px 0 90px;
+    }
+
+    /* HEADING */
+
+    .business-features-head {
+        margin-bottom: 45px;
+        padding: 0 25px;
+    }
+
+    .business-features-head h2 {
+        max-width: 700px;
+
+        font-size: 3.4rem;
+        line-height: 1.02;
+    }
+
+    /* 4 → 2 COLUMNS */
+
+    .business-features-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        min-height: auto;
+
+        overflow: hidden;
+    }
+
+    /* RESET DESKTOP SLASH */
+
+    .business-feature-card,
+    .feature-01,
+    .feature-02,
+    .feature-03,
+    .feature-04 {
+        min-height: 300px;
+
+        margin: 0;
+
+        padding: 45px 40px;
+
+        clip-path: none;
+    }
+
+    /* SOFT DIFFERENT SHADES REMAIN */
+
+    .feature-01 {
+        background: linear-gradient(
+            135deg,
+            #dff5e8,
+            #c9eddb
+        );
+    }
+
+    .feature-02 {
+        background: linear-gradient(
+            135deg,
+            #dff4f5,
+            #bfe7e9
+        );
+    }
+
+    .feature-03 {
+        background: linear-gradient(
+            135deg,
+            #fff4cf,
+            #f7e3a1
+        );
+    }
+
+    .feature-04 {
+        background: linear-gradient(
+            135deg,
+            #e3eef8,
+            #cddfed
+        );
+    }
+
+    /* NUMBER */
+
+    .business-feature-card > span,
+    .feature-02 > span,
+    .feature-03 > span,
+    .feature-04 > span {
+        top: 32px;
+        left: 38px;
+
+        font-size: 4rem;
+    }
+
+    .business-feature-card h3 {
+        max-width: 320px;
+
+        font-size: 1.65rem;
+    }
+
+    .business-feature-card p {
+        max-width: 340px;
+
+        font-size: .88rem;
+    }
+}
+/* ==================================================
+   HOME ABOUT PREVIEW — TABLET
+================================================== */
+
+.home-about-preview-grid {
+    grid-template-columns: 1fr 0.9fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.home-about-preview-content h2 {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+}
+
+.home-about-preview-lead,
+.home-about-preview-content p {
+    max-width: 100%;
+}
+
+.home-about-preview-meta {
+    gap: 25px;
+}
+
+.home-about-preview-visual {
+    min-height: 500px;
+}
+
+.home-about-preview-image {
+    width: 100%;
+}
+
+.home-about-preview-image img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.home-about-preview-caption {
+    max-width: 310px;
+}
+}
+
 
 @media(max-width:760px) {
     .container {
@@ -1114,6 +1444,867 @@
 .future-node:hover {
     transform: none;
 }
+
+
+    .industries-home {
+        padding: 65px 0;
+
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+    }
+
+
+    /* BLACK OVERLAY A LITTLE STRONGER ON MOBILE */
+
+    .industries-home::before {
+        background: rgba(0, 0, 0, 0.68);
+    }
+
+
+    /* HEADING */
+
+    .industries-home .section-head {
+        margin-bottom: 30px;
+    }
+
+    .industries-home .eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 0.68rem;
+        letter-spacing: 0.13em;
+    }
+
+    .industries-home .section-head h2 {
+        max-width: 100%;
+
+        font-size: 2.15rem;
+        line-height: 1.08;
+        letter-spacing: -0.035em;
+    }
+
+
+    /* CARDS */
+
+    .industries-home-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .industry-home-card {
+        width: 100%;
+
+        min-height: 210px;
+
+        padding: 25px 22px;
+
+        border-radius: 18px;
+
+        background: rgba(255, 255, 255, 0.11);
+
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+
+    /* NUMBER */
+
+    .industry-home-card::before {
+        top: 20px;
+        left: 22px;
+
+        font-size: 0.72rem;
+    }
+
+
+    /* TITLE */
+
+    .industry-home-card h3 {
+        margin-bottom: 9px;
+
+        font-size: 1.18rem;
+        line-height: 1.2;
+    }
+
+
+    /* DESCRIPTION */
+
+    .industry-home-card p {
+        font-size: 0.84rem;
+        line-height: 1.65;
+    }
+
+
+    /* REMOVE DESKTOP HOVER MOVEMENT */
+
+    .industry-home-card:hover {
+        transform: none;
+    }
+    .industries-home .section-head h2 {
+        font-size: 2.15rem;
+        line-height: 1.08;
+    }
+
+    .industry-home-card {
+        min-height: 220px;
+
+        justify-content: center;
+
+        padding: 55px 24px 28px;
+    }
+
+    .industry-home-card::before {
+        top: 20px;
+        left: 24px;
+    }
+
+    .industry-home-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .industry-home-card p {
+        font-size: .85rem;
+        line-height: 1.65;
+    }
+    /* =========================
+   SUSTAINABILITY — MOBILE
+========================= */
+
+.home-sustainability {
+    min-height: auto;
+    align-items: flex-start;
+
+    background-position: 72% center;
+}
+
+.home-sustainability-overlay {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(2, 26, 28, .90) 0%,
+            rgba(2, 30, 31, .84) 45%,
+            rgba(2, 30, 31, .94) 100%
+        );
+}
+
+.home-sustainability-inner {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+
+    padding: 58px 0 55px;
+}
+
+.home-sustainability-content {
+    max-width: 100%;
+}
+
+.home-sustainability-kicker {
+    margin-bottom: 14px;
+
+    font-size: .67rem;
+    letter-spacing: .14em;
+}
+
+.home-sustainability-kicker::before {
+    width: 32px;
+}
+
+.home-sustainability-content h2 {
+    max-width: 340px;
+
+    font-size: clamp(2.35rem, 10vw, 3.1rem);
+    line-height: .98;
+}
+
+.home-sustainability-content p {
+    max-width: 340px;
+
+    margin: 18px 0 24px;
+
+    font-size: .86rem;
+    line-height: 1.7;
+}
+
+.home-sustainability-btn {
+    font-size: .8rem;
+}
+
+
+/* VERTICAL TIMELINE */
+
+.sustainability-timeline {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    margin-top: 48px;
+    padding-top: 0;
+    padding-left: 30px;
+
+    border-top: 0;
+    border-left: 1px solid rgba(255,255,255,.28);
+}
+
+.sustainability-stage {
+    padding-bottom: 2px;
+}
+
+.sustainability-stage::before {
+    top: 3px;
+    left: -35px;
+
+    width: 9px;
+    height: 9px;
+}
+
+.sustainability-stage span {
+    margin-bottom: 6px;
+    font-size: .7rem;
+}
+
+.sustainability-stage strong {
+    font-size: 1rem;
+}
+
+.sustainability-stage small {
+    margin-top: 4px;
+    font-size: .74rem;
+}
+/* =========================================
+   KEY ADVANTAGES — MOBILE
+========================================= */
+.key-advantages {
+    position: relative;
+
+    padding: 65px 0 40px;
+
+    overflow: hidden;
+}
+/* HEADING */
+
+.key-advantages .section-head {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto 24px;
+    padding: 0 16px;
+
+    text-align: center;
+}
+
+.key-advantages .section-head > div {
+    width: 100%;
+    text-align: center;
+}
+
+.key-advantages .eyebrow {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 10px;
+
+    font-size: .7rem;
+    font-weight: 800;
+    line-height: 1.3;
+
+    letter-spacing: .12em;
+    text-align: center;
+}
+
+.key-advantages .section-head h2 {
+    display: block;
+
+    width: 100%;
+    max-width: 360px;
+
+    margin: 0 auto;
+
+    font-size: 2rem;
+    line-height: 1.08;
+
+    letter-spacing: -.04em;
+    text-align: center;
+}
+
+
+/* 3 COLUMNS → MOBILE STACK */
+
+.advantages-grid {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    border-top: 1px solid rgba(15, 40, 55, .12);
+}
+
+
+/* LEFT CONTENT */
+.advantage-card {
+    width: 100%;
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 16px;
+
+    text-align: center;
+}
+
+/* FIRST CONTENT */
+
+.advantage-card:first-child {
+    padding: 28px 16px 12px;
+}
+
+/* SECOND CONTENT */
+
+.advantage-card:last-child {
+    padding: 26px 16px 90px;
+
+    border-top: 1px solid rgba(15, 40, 55, .10);
+}
+
+/* LABEL */
+.advantage-card > span {
+    display: block;
+
+    margin: 0 0 12px;
+
+    font-size: .65rem;
+    font-weight: 800;
+    line-height: 1.4;
+
+    letter-spacing: .12em;
+    text-transform: uppercase;
+
+    color: var(--green);
+
+    text-align: center;
+}
+
+.advantage-card h3 {
+    width: 100%;
+    max-width: 330px;
+
+    margin: 0 auto 14px;
+
+    font-size: 1.55rem;
+    line-height: 1.12;
+    letter-spacing: -.035em;
+
+    color: #007c83;
+
+    text-align: center;
+}
+
+.advantage-card p {
+    width: 100%;
+    max-width: 350px;
+
+    margin: 0 auto;
+
+    font-size: .86rem;
+    line-height: 1.65;
+
+    color: #687785;
+
+    text-align: center;
+}
+/* CENTER IMAGE */
+/* CENTER IMAGE */
+
+.advantages-center {
+    width: 100%;
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 0 25px;
+    margin: 0;
+}
+
+.advantages-center::before {
+    display: none;
+}
+
+.advantages-image-wrap {
+    position: relative;
+
+    width: 210px;
+    height: 160px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+}
+
+.advantages-image-wrap::before {
+    width: 180px;
+    height: 180px;
+}
+
+.advantages-image-wrap img {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: contain;
+}
+/* ==================================================
+   BETTER SUPPLY — MOBILE
+================================================== */
+
+.business-features-section {
+    padding: 60px 0 70px;
+}
+
+
+/* ==============================
+   HEADING
+============================== */
+
+.business-features-head {
+    margin-bottom: 35px;
+    padding: 0 16px;
+
+    text-align: center;
+}
+
+.business-features-head .eyebrow {
+    margin-bottom: 10px;
+
+    font-size: .65rem;
+    letter-spacing: .12em;
+}
+
+.business-features-head h2 {
+    max-width: 340px;
+
+    margin: 0 auto;
+
+    font-size: 2rem;
+    line-height: 1.08;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   STACK ALL 4 SECTIONS
+============================== */
+
+.business-features-grid {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    min-height: auto;
+
+    overflow: hidden;
+}
+
+
+/* ==============================
+   COMMON ITEM
+============================== */
+
+.business-feature-card {
+    width: 100%;
+
+    min-height: 220px;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 55px 28px 45px;
+
+    clip-path: none;
+}
+
+
+/* ==============================
+   DIAGONAL BOTTOM SHAPES
+============================== */
+
+/* 01 */
+
+.feature-01 {
+    padding-bottom: 65px;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 88%,
+        0 100%
+    );
+}
+
+
+/* 02 */
+
+.feature-02 {
+    margin-top: -25px;
+
+    padding-top: 75px;
+    padding-bottom: 65px;
+
+    clip-path: polygon(
+        0 12%,
+        100% 0,
+        100% 88%,
+        0 100%
+    );
+}
+
+
+/* 03 */
+
+.feature-03 {
+    margin-top: -25px;
+
+    padding-top: 75px;
+    padding-bottom: 65px;
+
+    clip-path: polygon(
+        0 12%,
+        100% 0,
+        100% 88%,
+        0 100%
+    );
+}
+
+
+/* 04 */
+
+.feature-04 {
+    margin-top: -25px;
+
+    padding-top: 75px;
+    padding-bottom: 50px;
+
+    clip-path: polygon(
+        0 12%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+}
+
+
+/* ==============================
+   NUMBER
+============================== */
+
+.business-feature-card > span,
+.feature-02 > span,
+.feature-03 > span,
+.feature-04 > span {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    display: block;
+
+    margin: 0 0 18px;
+
+    font-size: 3rem;
+    line-height: 1;
+
+    opacity: .14;
+}
+
+
+/* ==============================
+   TITLE
+============================== */
+
+.business-feature-card h3 {
+    max-width: 280px;
+
+    margin: 0 0 12px;
+
+    font-size: 1.45rem;
+    line-height: 1.1;
+}
+
+
+/* ==============================
+   DESCRIPTION
+============================== */
+
+.business-feature-card p {
+    max-width: 310px;
+
+    margin: 0;
+
+    font-size: .82rem;
+    line-height: 1.6;
+}
+/* ==================================================
+   HOME ABOUT PREVIEW — MOBILE
+================================================== */
+
+.home-about-preview {
+    padding: 60px 0 65px;
+
+    overflow: hidden;
+}
+
+
+/* MAIN LAYOUT */
+
+.home-about-preview-grid {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 42px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+/* ==============================
+   CONTENT
+============================== */
+
+.home-about-preview-content {
+    width: 100%;
+
+    text-align: left;
+}
+
+
+/* KICKER */
+
+.home-about-preview-kicker {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: .68rem;
+    font-weight: 800;
+
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+
+/* HEADING */
+
+.home-about-preview-content h2 {
+    max-width: 430px;
+
+    margin: 0 0 22px;
+
+    font-size: 2.35rem;
+    line-height: 1.04;
+
+    letter-spacing: -.045em;
+}
+
+.home-about-preview-content h2 span {
+    display: block;
+}
+
+
+/* TEXT */
+
+.home-about-preview-lead {
+    margin-bottom: 16px;
+
+    font-size: .92rem;
+    line-height: 1.7;
+}
+
+.home-about-preview-content p {
+    max-width: 100%;
+
+    margin-bottom: 14px;
+
+    font-size: .84rem;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   STATS
+============================== */
+
+.home-about-preview-meta {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 100%;
+
+    margin-top: 28px;
+    margin-bottom: 30px;
+
+    gap: 0;
+
+    border-top: 1px solid rgba(15, 40, 55, .12);
+    border-bottom: 1px solid rgba(15, 40, 55, .12);
+}
+
+.home-about-preview-meta > div {
+    padding: 20px 10px;
+
+    text-align: center;
+}
+
+.home-about-preview-meta > div:not(:last-child) {
+    border-right: 1px solid rgba(15, 40, 55, .12);
+}
+
+.home-about-preview-meta strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 1.4rem;
+    line-height: 1;
+
+    color: var(--green);
+}
+
+.home-about-preview-meta span {
+    display: block;
+
+    font-size: .65rem;
+    line-height: 1.35;
+}
+
+
+/* ==============================
+   LINK
+============================== */
+
+.home-about-preview-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: .84rem;
+}
+
+
+/* ==============================
+   VISUAL
+============================== */
+
+.home-about-preview-visual {
+    position: relative;
+
+    width: 100%;
+    min-height: auto;
+
+    margin: 0;
+}
+
+
+/* IMAGE */
+
+.home-about-preview-image {
+    width: 100%;
+
+    margin: 0;
+}
+
+.home-about-preview-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 420px;
+
+    object-fit: contain;
+}
+
+
+/* ==============================
+   CAPTION
+============================== */
+
+.home-about-preview-caption {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 18px;
+
+    padding: 16px 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    background: transparent;
+
+    border-top: 1px solid rgba(15, 40, 55, .12);
+    border-bottom: 1px solid rgba(15, 40, 55, .12);
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+.home-about-preview-caption-dot {
+    flex: 0 0 9px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+}
+
+.home-about-preview-caption strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: .82rem;
+}
+
+.home-about-preview-caption small {
+    display: block;
+
+    font-size: .7rem;
+    line-height: 1.45;
+}
 }
 
 @media(max-width:390px) {
@@ -1335,6 +2526,374 @@ min-width: 72%;
 
 .future-node-content p {
     font-size: .76rem;
+}
+
+
+    .industries-home {
+        padding: 52px 0;
+    }
+
+    .industries-home .section-head {
+        margin-bottom: 24px;
+    }
+
+    .industries-home .section-head h2 {
+        font-size: 1.85rem;
+        line-height: 1.1;
+    }
+
+    .industry-home-card {
+        min-height: 190px;
+
+        padding: 23px 18px;
+
+        border-radius: 16px;
+    }
+
+    .industry-home-card::before {
+        left: 18px;
+        top: 18px;
+    }
+
+    .industry-home-card h3 {
+        font-size: 1.08rem;
+    }
+
+    .industry-home-card p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    /* SUSTAINABILITY — SMALL MOBILE */
+
+.home-sustainability-inner {
+    width: calc(100% - 24px);
+    padding: 50px 0 48px;
+}
+
+.home-sustainability-content h2 {
+    max-width: 300px;
+
+    font-size: 2.25rem;
+}
+
+.home-sustainability-content p {
+    max-width: 300px;
+
+    font-size: .82rem;
+}
+
+.sustainability-timeline {
+    margin-top: 40px;
+    gap: 26px;
+}
+/* =========================================
+   KEY ADVANTAGES — SMALL MOBILE
+========================================= */
+
+.key-advantages {
+    padding: 55px 0 35px;
+}
+
+/* HEADING */
+
+.key-advantages .section-head {
+    margin-bottom: 20px;
+    padding: 0 12px;
+}
+
+.key-advantages .eyebrow {
+    margin-bottom: 9px;
+
+    font-size: .64rem;
+    letter-spacing: .11em;
+}
+
+.key-advantages .section-head h2 {
+    max-width: 300px;
+
+    font-size: 1.75rem;
+    line-height: 1.08;
+}
+
+
+/* CONTENT */
+
+.advantage-card {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.advantage-card:first-child {
+    padding: 25px 12px 10px;
+}
+
+.advantage-card:last-child {
+    padding: 24px 12px 85px;
+}
+
+
+/* LABEL */
+
+.advantage-card > span {
+    margin-bottom: 10px;
+
+    font-size: .61rem;
+    letter-spacing: .1em;
+}
+
+
+/* TITLE */
+
+.advantage-card h3 {
+    max-width: 300px;
+
+    margin-bottom: 12px;
+
+    font-size: 1.4rem;
+    line-height: 1.12;
+}
+
+
+/* DESCRIPTION */
+
+.advantage-card p {
+    max-width: 310px;
+
+    font-size: .8rem;
+    line-height: 1.6;
+}
+
+
+/* CENTER IMAGE */
+
+.advantages-center {
+    padding: 8px 0 22px;
+}
+
+.advantages-image-wrap {
+    width: 195px;
+    height: 150px;
+}
+
+.advantages-image-wrap::before {
+    width: 165px;
+    height: 165px;
+}
+
+.advantages-image-wrap img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+/* ==================================================
+   BETTER SUPPLY — SMALL MOBILE
+================================================== */
+
+.business-features-section {
+    padding: 48px 0 55px;
+}
+
+
+/* HEADING */
+
+.business-features-head {
+    margin-bottom: 28px;
+
+    padding: 0 14px;
+}
+
+.business-features-head .eyebrow {
+    margin-bottom: 8px;
+
+    font-size: .6rem;
+    letter-spacing: .11em;
+}
+
+.business-features-head h2 {
+    max-width: 300px;
+
+    font-size: 1.75rem;
+    line-height: 1.08;
+
+    letter-spacing: -.04em;
+}
+
+
+/* EACH COLOUR AREA */
+
+.business-feature-card {
+    min-height: 195px;
+
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+
+/* FIRST */
+
+.feature-01 {
+    padding-top: 42px;
+    padding-bottom: 58px;
+}
+
+
+/* SECOND */
+
+.feature-02 {
+    margin-top: -22px;
+
+    padding-top: 68px;
+    padding-bottom: 58px;
+}
+
+
+/* THIRD */
+
+.feature-03 {
+    margin-top: -22px;
+
+    padding-top: 68px;
+    padding-bottom: 58px;
+}
+
+
+/* FOURTH */
+
+.feature-04 {
+    margin-top: -22px;
+
+    padding-top: 68px;
+    padding-bottom: 42px;
+}
+
+
+/* NUMBER */
+
+.business-feature-card > span,
+.feature-02 > span,
+.feature-03 > span,
+.feature-04 > span {
+    margin-bottom: 14px;
+
+    font-size: 2.5rem;
+}
+
+
+/* TITLE */
+
+.business-feature-card h3 {
+    max-width: 270px;
+
+    margin-bottom: 10px;
+
+    font-size: 1.3rem;
+    line-height: 1.1;
+}
+
+
+/* DESCRIPTION */
+
+.business-feature-card p {
+    max-width: 290px;
+
+    font-size: .76rem;
+    line-height: 1.55;
+}
+/* ==================================================
+   HOME ABOUT PREVIEW — SMALL MOBILE
+================================================== */
+
+.home-about-preview {
+    padding: 50px 0 55px;
+}
+
+.home-about-preview-grid {
+    gap: 34px;
+
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+
+/* HEADING */
+
+.home-about-preview-kicker {
+    font-size: .62rem;
+}
+
+.home-about-preview-content h2 {
+    max-width: 330px;
+
+    margin-bottom: 18px;
+
+    font-size: 2rem;
+    line-height: 1.05;
+}
+
+
+/* TEXT */
+
+.home-about-preview-lead {
+    font-size: .84rem;
+    line-height: 1.65;
+}
+
+.home-about-preview-content p {
+    font-size: .78rem;
+    line-height: 1.65;
+}
+
+
+/* STATS */
+
+.home-about-preview-meta {
+    margin-top: 24px;
+    margin-bottom: 26px;
+}
+
+.home-about-preview-meta > div {
+    padding: 17px 5px;
+}
+
+.home-about-preview-meta strong {
+    font-size: 1.2rem;
+}
+
+.home-about-preview-meta span {
+    font-size: .58rem;
+}
+
+
+/* LINK */
+
+.home-about-preview-link {
+    font-size: .78rem;
+}
+
+
+/* IMAGE */
+
+.home-about-preview-image img {
+    max-height: 330px;
+}
+
+
+/* CAPTION */
+
+.home-about-preview-caption {
+    margin-top: 14px;
+
+    padding: 14px 0;
+}
+
+.home-about-preview-caption strong {
+    font-size: .76rem;
+}
+
+.home-about-preview-caption small {
+    font-size: .64rem;
 }
 }
 

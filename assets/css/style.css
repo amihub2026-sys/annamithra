@@ -304,6 +304,375 @@ textarea {
     max-width: 650px;
     color: var(--muted)
 }
+
+/* ==================================================
+   HOME ABOUT PREVIEW — ANNAMITHRA
+================================================== */
+
+.home-about-preview {
+    position: relative;
+    overflow: hidden;
+
+    padding: 115px 0;
+
+    background:
+        radial-gradient(
+            circle at 8% 18%,
+            rgba(22, 140, 255, .07),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 92% 80%,
+            rgba(39, 209, 127, .07),
+            transparent 30%
+        ),
+        #ffffff;
+}
+
+
+/* subtle premium vertical accent */
+
+.home-about-preview::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 18%;
+    bottom: 18%;
+
+    width: 4px;
+
+    border-radius: 0 20px 20px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #168cff,
+            #27d17f,
+            #006b70
+        );
+
+    opacity: .8;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.home-about-preview-grid {
+    display: grid;
+
+    grid-template-columns: .92fr 1.08fr;
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.home-about-preview-content {
+    max-width: 610px;
+}
+
+
+.home-about-preview-kicker {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #006b70;
+
+    font-size: .74rem;
+    font-weight: 850;
+
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+
+.home-about-preview-kicker::before {
+    content: "";
+
+    width: 42px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #168cff,
+            #27d17f
+        );
+}
+
+
+.home-about-preview-content h2 {
+    margin: 0 0 25px;
+
+    color: #15212b;
+
+    font-size: clamp(2.8rem, 4.4vw, 4.8rem);
+    font-weight: 900;
+
+    line-height: .98;
+    letter-spacing: -.055em;
+}
+
+
+.home-about-preview-content h2 span {
+    display: block;
+
+    color: #006b70;
+}
+
+
+.home-about-preview-content > p {
+    margin: 0 0 16px;
+
+    color: #66737d;
+
+    font-size: .96rem;
+    line-height: 1.82;
+}
+
+
+.home-about-preview-content
+.home-about-preview-lead {
+    color: #44535e;
+
+    font-size: 1.04rem;
+    font-weight: 550;
+}
+
+
+/* =========================
+   QUICK NUMBERS
+========================= */
+
+.home-about-preview-meta {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0;
+
+    margin: 35px 0 32px;
+
+    border-top: 1px solid #dce3e5;
+    border-bottom: 1px solid #dce3e5;
+}
+
+
+.home-about-preview-meta > div {
+    position: relative;
+
+    padding: 19px 16px 19px 0;
+}
+
+
+.home-about-preview-meta > div:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    right: 13px;
+    top: 20%;
+    bottom: 20%;
+
+    width: 1px;
+
+    background: #dce3e5;
+}
+
+
+.home-about-preview-meta strong {
+    display: block;
+
+    color: #006b70;
+
+    font-size: 1.55rem;
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+
+.home-about-preview-meta span {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #7a858d;
+
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+
+/* =========================
+   LINK
+========================= */
+
+.home-about-preview-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid rgba(0, 107, 112, .35);
+
+    color: #006b70;
+
+    font-size: .88rem;
+    font-weight: 850;
+}
+
+
+.home-about-preview-link span {
+    transition: transform .3s ease;
+}
+
+
+.home-about-preview-link:hover span {
+    transform: translateX(6px);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.home-about-preview-visual {
+    position: relative;
+
+    min-height: 540px;
+}
+
+
+.home-about-preview-image {
+    position: absolute;
+
+    inset: 0 0 35px 0;
+
+    overflow: hidden;
+
+    border-radius: 4px 42px 4px 42px;
+
+    box-shadow:
+        0 35px 85px rgba(10, 34, 57, .16);
+}
+
+
+.home-about-preview-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(3, 22, 24, .35)
+        );
+
+    pointer-events: none;
+}
+
+
+.home-about-preview-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.home-about-preview-visual:hover
+.home-about-preview-image img {
+    transform: scale(1.035);
+}
+
+
+/* =========================
+   IMAGE CAPTION
+========================= */
+
+.home-about-preview-caption {
+    position: absolute;
+
+    left: 32px;
+    right: 32px;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px 20px;
+
+    border: 1px solid rgba(255, 255, 255, .7);
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, .88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 50px rgba(10, 34, 57, .14);
+}
+
+
+.home-about-preview-caption-dot {
+    flex: 0 0 12px;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #27d17f;
+
+    box-shadow:
+        0 0 0 6px rgba(39, 209, 127, .12),
+        0 0 22px rgba(39, 209, 127, .5);
+}
+
+
+.home-about-preview-caption strong {
+    display: block;
+
+    color: #15212b;
+
+    font-size: .86rem;
+}
+
+
+.home-about-preview-caption small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #75818a;
+
+    font-size: .7rem;
+}
 /* =========================================
    CATEGORY SECTION HEADING - CENTER ONLY
 ========================================= */
@@ -1192,6 +1561,313 @@ textarea.form-control {
     to {
         transform: translateX(-50%);
     }
+}
+/* ==================================================
+   HOME — WHY CHOOSE ANNAMITHRA
+================================================== */
+
+.home-why-section {
+    position: relative;
+    padding: 110px 0;
+    overflow: hidden;
+
+    background-image: url("../images/why-choose-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.home-why-list {
+    position: relative;
+    z-index: 2;
+
+background: rgba(5, 12, 15, 0.58);
+
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+
+border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+.home-why-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    z-index: 1;
+    pointer-events: none;
+}
+.home-why-section .container {
+    position: relative;
+    z-index: 2;
+}
+/* MAIN LAYOUT */
+
+.home-why-grid {
+    display: grid;
+    grid-template-columns: .82fr 1.18fr;
+    gap: 100px;
+    align-items: start;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.home-why-heading {
+    position: sticky;
+    top: 130px;
+}
+
+.home-why-kicker {
+    display: inline-block;
+
+    margin-bottom: 18px;
+    color: #39d69b;
+
+
+    font-size: .82rem;
+    font-weight: 800;
+
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+
+.home-why-heading h2 {
+    max-width: 540px;
+
+    margin: 0;
+
+     color: #ffffff;
+
+    font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+    font-weight: 900;
+
+    line-height: .98;
+    letter-spacing: -.055em;
+}
+
+
+.home-why-heading h2 span {
+    color: #25b780;
+}
+
+
+.home-why-heading p {
+    max-width: 500px;
+
+    margin: 28px 0 32px;
+
+    color: rgba(255, 255, 255, 0.70);
+
+
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+/* DISCOVER LINK */
+
+.home-why-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+        color: #39d69b;
+
+
+    font-weight: 800;
+    text-decoration: none;
+
+    transition:
+        color .3s ease,
+        gap .3s ease;
+}
+
+
+.home-why-link span {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(0, 107, 112, .22);
+    border-radius: 50%;
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+}
+
+
+.home-why-link:hover {
+    color: var(--green);
+    gap: 20px;
+}
+
+
+.home-why-link:hover span {
+    transform: rotate(45deg);
+
+    background: var(--green);
+    color: #ffffff;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.home-why-list {
+    border-top: 1px solid rgba(10, 34, 57, .13);
+}
+
+
+.home-why-item {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 75px 1fr 55px;
+    align-items: center;
+
+    min-height: 155px;
+
+    padding: 30px 10px;
+
+   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+
+    transition:
+        padding .4s cubic-bezier(.22, 1, .36, 1),
+        background .4s ease;
+}
+
+
+/* NUMBER */
+
+.home-why-number {
+        color: rgba(83, 211, 171, 0.75);
+
+
+    font-size: .8rem;
+    font-weight: 900;
+
+    letter-spacing: .08em;
+}
+
+
+/* TEXT */
+
+.home-why-item-content h3 {
+    margin: 0 0 9px;
+
+   color: #ffffff;
+
+    font-size: 1.35rem;
+    font-weight: 850;
+
+    letter-spacing: -.025em;
+}
+
+
+.home-why-item-content p {
+    max-width: 520px;
+
+    margin: 0;
+
+    color: var(--muted);    color: rgba(255, 255, 255, 0.65);
+
+
+    font-size: .91rem;
+    line-height: 1.7;
+}
+
+
+/* ARROW */
+
+.home-why-arrow {
+    justify-self: end;
+
+    display: grid;
+    place-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid rgba(10, 34, 57, .13);
+    border-radius: 50%;
+
+     border-color: rgba(255, 255, 255, 0.20);
+    color: #ffffff;
+
+    font-size: 1.15rem;
+
+    transition:
+        transform .4s cubic-bezier(.22, 1, .36, 1),
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+}
+
+
+/* =========================
+   PREMIUM HOVER
+========================= */
+
+.home-why-item::before {
+    content: "";
+
+    position: absolute;
+    inset: 8px 0;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(0, 107, 112, .07),
+            rgba(31, 104, 78, .035)
+        );
+
+    opacity: 0;
+    transform: scaleX(.97);
+
+    transition:
+        opacity .35s ease,
+        transform .45s cubic-bezier(.22, 1, .36, 1);
+
+    z-index: 0;
+}
+
+
+.home-why-item > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.home-why-item:hover {
+    padding-left: 24px;
+    padding-right: 18px;
+}
+
+
+.home-why-item:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+.home-why-item:hover .home-why-arrow {
+    transform: rotate(45deg);
+
+    background: var(--green);
+    border-color: var(--green);
+
+    color: #ffffff;
 }
 /* =========================
    CINEMATIC IMAGE STATS
@@ -4221,4 +4897,1321 @@ color: #ffffff;
     box-shadow:
         0 4px 12px rgba(10, 34, 57, .18),
         0 0 0 1px rgba(10, 34, 57, .08);
+}
+/* ==================================================
+   HOME — INDUSTRIES WE SERVE
+================================================== */
+
+.industries-home {
+    position: relative;
+    padding: 110px 0;
+    overflow: hidden;
+
+    background-image: url("../images/industries-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.industries-home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.82) 0%,
+        rgba(0, 0, 0, 0.68) 50%,
+        rgba(0, 0, 0, 0.58) 100%
+    );
+
+    z-index: 1;
+    pointer-events: none;
+}
+.industries-home .eyebrow {
+    color: #55d49b !important;
+}
+
+.industries-home .section-head h2 {
+    color: #ffffff;
+}
+
+.industries-home .container {
+    position: relative;
+    z-index: 2;
+}
+
+.industries-home .section-head {
+    margin-bottom: 55px;
+}
+
+.industries-home .eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+
+    color: var(--green);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+}
+
+.industries-home .section-head h2 {
+    max-width: 720px;
+    margin: 0;
+
+    color: var(--ink);
+
+    font-size: clamp(2.4rem, 4vw, 4.2rem);
+    font-weight: 900;
+
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+.industries-home-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.industry-home-card {
+    position: relative;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px 38px 35px;
+
+    background: rgba(20, 20, 20, 0.58);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    transition:
+        transform .45s cubic-bezier(.22, 1, .36, 1),
+        background .35s ease,
+        border-color .35s ease;
+}
+.industry-home-card::before {
+    position: absolute;
+
+    top: 28px;
+    left: 38px;
+
+    color: #4ce0a7;
+
+    font-size: .78rem;
+    font-weight: 900;
+
+    letter-spacing: .10em;
+}
+
+.industry-home-card:nth-child(1)::before {
+    content: "01";
+}
+
+.industry-home-card:nth-child(2)::before {
+    content: "02";
+}
+
+.industry-home-card:nth-child(3)::before {
+    content: "03";
+}
+
+.industry-home-card:nth-child(4)::before {
+    content: "04";
+}
+
+.industry-home-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -90px;
+    right: -90px;
+
+    border-radius: 50%;
+
+    background: rgba(25, 152, 106, 0.08);
+
+    transition:
+        transform 0.6s cubic-bezier(.22, 1, .36, 1),
+        background 0.35s ease;
+}
+
+.industry-home-card h3 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 16px;
+
+    color: #ffffff !important;
+
+    font-size: 1.35rem;
+    font-weight: 850;
+
+    line-height: 1.2;
+    letter-spacing: -.025em;
+}
+.industry-home-card p {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78) !important;
+
+    font-size: .93rem;
+    line-height: 1.75;
+}
+
+.industry-home-card:hover {
+    transform: translateY(-10px);
+
+    background: rgba(255, 255, 255, 0.16);
+
+    border-color: rgba(85, 212, 155, 0.50);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25);
+}
+.industry-home-card:hover::after {
+    transform: scale(2.1);
+    background: rgba(25, 152, 106, 0.10);
+}
+.industries-home .section-head h2 {
+    color: #ffffff !important;
+}
+.industries-home .section-head {
+    margin-bottom: 55px;
+}
+
+.industries-home .eyebrow {
+    color: #4ce0a7 !important;
+}
+
+.industries-home .section-head h2 {
+    max-width: 850px;
+
+    margin: 0;
+
+    color: #ffffff !important;
+
+    font-size: clamp(2.8rem, 4.2vw, 4.5rem);
+    font-weight: 900;
+
+    line-height: 1.02;
+    letter-spacing: -.045em;
+}
+/* ==================================================
+   HOME SUSTAINABILITY
+================================================== */
+
+.home-sustainability {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background: #f7faf8;
+}
+
+
+/* subtle decorative glow */
+
+.home-sustainability::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -220px;
+    top: -220px;
+    border-radius: 50%;
+    background: rgba(30, 90, 70, .055);
+    pointer-events: none;
+}
+
+
+/* ===============================
+   TOP
+================================ */
+
+.sustainability-top {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 100px;
+
+    align-items: end;
+
+    padding-bottom: 65px;
+
+    border-bottom: 1px solid #dce5e1;
+}
+
+
+.sustainability-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    color: #1e5a46;
+
+    font-size: .76rem;
+    font-weight: 850;
+
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+
+.sustainability-kicker::before {
+    content: "";
+
+    width: 38px;
+    height: 2px;
+
+    background: #1e5a46;
+}
+
+
+.sustainability-heading h2 {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #15212b;
+
+    font-size: clamp(3rem, 5vw, 5.4rem);
+    font-weight: 900;
+
+    line-height: .96;
+    letter-spacing: -.055em;
+}
+
+
+.sustainability-heading h2 span {
+    display: block;
+    color: #1e5a46;
+}
+
+
+/* INTRO */
+
+.sustainability-intro {
+    max-width: 500px;
+    padding-bottom: 8px;
+}
+
+
+.sustainability-intro p {
+    margin: 0 0 28px;
+
+    color: #66737d;
+
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+
+.sustainability-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+
+    color: #006b70;
+
+    font-size: .88rem;
+    font-weight: 800;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid rgba(0, 107, 112, .3);
+}
+
+
+.sustainability-link span {
+    font-size: 1.1rem;
+    transition: transform .3s ease;
+}
+
+
+.sustainability-link:hover span {
+    transform: translate(4px, -4px);
+}
+
+
+/* ===============================
+   CARDS
+================================ */
+
+.sustainability-cards {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0;
+
+    margin-top: 65px;
+}
+
+
+.sustainability-card {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 15px 48px 35px;
+
+    border-right: 1px solid #dce5e1;
+}
+
+
+.sustainability-card:first-child {
+    padding-left: 0;
+}
+
+
+.sustainability-card:last-child {
+    border-right: 0;
+}
+
+
+.sustainability-number {
+    display: block;
+
+    margin-bottom: 40px;
+
+    color: #7db2a3;
+
+    font-size: .72rem;
+    font-weight: 900;
+
+    letter-spacing: .12em;
+}
+
+
+.sustainability-card-line {
+    width: 45px;
+    height: 2px;
+
+    margin-bottom: 23px;
+
+    background: #1e5a46;
+
+    transition: width .4s ease;
+}
+
+
+.sustainability-card:hover .sustainability-card-line {
+    width: 85px;
+}
+
+
+.sustainability-card h3 {
+    margin: 0 0 15px;
+
+    color: #15212b;
+
+    font-size: 1.4rem;
+    font-weight: 850;
+
+    letter-spacing: -.025em;
+}
+
+
+.sustainability-card p {
+    max-width: 340px;
+
+    margin: 0;
+
+    color: #738079;
+
+    font-size: .9rem;
+    line-height: 1.75;
+}
+
+
+/* ===============================
+   SUPPLY FLOW
+================================ */
+
+.sustainability-flow {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 190px 1fr;
+
+    gap: 50px;
+    align-items: center;
+
+    margin-top: 30px;
+    padding: 30px 0 0;
+
+    border-top: 1px solid #dce5e1;
+}
+
+
+.sustainability-flow-label {
+    color: #1e5a46;
+
+    font-size: .72rem;
+    font-weight: 850;
+
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+
+.sustainability-flow-items {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+}
+
+
+.sustainability-flow-items div {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 90px;
+}
+
+
+.sustainability-flow-items strong {
+    color: #15212b;
+
+    font-size: .86rem;
+    font-weight: 800;
+}
+
+
+.sustainability-flow-items span {
+    margin-top: 3px;
+
+    color: #91a29c;
+
+    font-size: .66rem;
+    font-weight: 700;
+}
+
+
+.sustainability-flow-items i {
+    flex: 1;
+
+    height: 1px;
+
+    margin: 0 22px;
+
+    background: #b8ccc5;
+
+    position: relative;
+}
+
+
+.sustainability-flow-items i::after {
+    content: "";
+
+    position: absolute;
+
+    right: -1px;
+    top: 50%;
+
+    width: 5px;
+    height: 5px;
+
+    border-top: 1px solid #789e91;
+    border-right: 1px solid #789e91;
+
+    transform: translateY(-50%) rotate(45deg);
+}
+/* ==================================================
+   HOME SUSTAINABILITY — CINEMATIC BACKGROUND
+================================================== */
+
+.home-sustainability {
+    position: relative;
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        url("../images/sustainability-bg.png")
+        center / cover no-repeat;
+
+    color: #fff;
+}
+
+
+.home-sustainability-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 25, 27, .94) 0%,
+            rgba(2, 31, 31, .80) 36%,
+            rgba(2, 31, 31, .42) 67%,
+            rgba(2, 31, 31, .20) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.08),
+            rgba(0,0,0,.42)
+        );
+}
+
+
+.home-sustainability-inner {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+
+    padding: 100px 0 75px;
+}
+
+
+.home-sustainability-content {
+    max-width: 760px;
+}
+.home-sustainability-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #a9efd1;
+
+    font-size: .72rem;
+    font-weight: 850;
+
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+
+.home-sustainability-kicker::before {
+    content: "";
+
+    width: 42px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #168cff,
+            #40d790
+        );
+}
+
+.home-sustainability-content h2 {
+    margin: 0;
+
+    font-size: clamp(3rem, 4.8vw, 5rem);
+    font-weight: 900;
+
+    line-height: .96;
+    letter-spacing: -.05em;
+}
+.home-sustainability-content h2 span {
+    display: block;
+    color: #9ce8c9;
+}
+
+
+.home-sustainability-content p {
+    max-width: 600px;
+
+    margin: 25px 0 30px;
+
+    color: rgba(255,255,255,.76);
+
+    font-size: .98rem;
+    line-height: 1.8;
+}
+
+
+.home-sustainability-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+
+    color: #fff;
+
+    font-size: .84rem;
+    font-weight: 800;
+
+    padding-bottom: 7px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.35);
+}
+
+
+.home-sustainability-btn span {
+    transition: transform .3s ease;
+}
+
+
+.home-sustainability-btn:hover span {
+    transform: translateX(6px);
+}
+
+
+/* =================================
+   CLEAN TIMELINE — NO CARDS
+================================= */
+
+.sustainability-timeline {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 35px;
+
+    margin-top: 90px;
+    padding-top: 38px;
+
+    border-top:
+        1px solid rgba(255,255,255,.28);
+}
+
+
+.sustainability-stage {
+    position: relative;
+}
+
+
+.sustainability-stage::before {
+    content: "";
+
+    position: absolute;
+
+    top: -43px;
+    left: 0;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #7fe0bc;
+
+    box-shadow:
+        0 0 0 5px rgba(127,224,188,.12),
+        0 0 20px rgba(127,224,188,.5);
+}
+
+
+.sustainability-stage span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: rgba(255,255,255,.45);
+
+    font-size: .68rem;
+    font-weight: 900;
+}
+
+
+.sustainability-stage strong {
+    display: block;
+
+    color: #fff;
+
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+
+.sustainability-stage small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: rgba(255,255,255,.58);
+
+    font-size: .72rem;
+}
+/* =========================================
+   SUSTAINABILITY — DESKTOP TEXT SIZE UPDATE
+========================================= */
+
+/* RESPONSIBLE SUPPLY */
+.home-sustainability-kicker {
+    font-size: 0.82rem;
+    letter-spacing: 0.17em;
+}
+
+/* Main description */
+.home-sustainability-content p {
+    font-size: 1.08rem;
+    line-height: 1.9;
+    max-width: 720px;
+}
+
+/* Explore Our Approach */
+.home-sustainability-btn {
+    font-size: 0.95rem;
+}
+
+/* 01 02 03 04 */
+.sustainability-stage span {
+    font-size: 0.78rem;
+}
+
+/* Source / Handle / Store / Supply */
+.sustainability-stage strong {
+    font-size: 1.15rem;
+    line-height: 1.3;
+}
+
+/* Trusted suppliers etc. */
+.sustainability-stage small {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+/* =========================================
+   HOME — KEY ADVANTAGES
+========================================= */
+.key-advantages {
+    position: relative;
+    overflow: hidden;
+
+    padding: 110px 0 120px;
+
+    background:
+        radial-gradient(
+            circle at 8% 15%,
+            rgba(23, 101, 78, .08),
+            transparent 27%
+        ),
+        #ffffff;
+}
+
+
+/* HEADING */
+.home-advantages .section-head  {
+    display: block;
+
+    max-width: 100%;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+.key-advantages .section-head > div {
+    width: 100%;
+    text-align: center;
+}
+
+.key-advantages .eyebrow {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.key-advantages .section-head h2 {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    font-size: clamp(3rem, 5vw, 5.2rem);
+    line-height: .98;
+    letter-spacing: -.055em;
+
+    color: var(--navy);
+}
+
+/* =========================================
+   KEY ADVANTAGES — 3 COLUMN DESIGN
+========================================= */
+
+.advantages-grid {
+    display: grid;
+
+grid-template-columns:
+    minmax(0, 1fr)
+    380px
+    minmax(0, 1fr);
+
+    align-items: stretch;
+
+    border-top: 1px solid rgba(15, 40, 55, .16);
+}
+
+
+/* LEFT + RIGHT CONTENT */
+
+.advantage-card {
+    position: relative;
+
+    min-height: 420px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px 50px;
+
+    background: transparent;
+
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+/* LEFT */
+
+.advantage-card:first-child {
+    padding-left: 0;
+}
+
+
+/* RIGHT */
+
+.advantage-card:last-child {
+    padding-right: 0;
+}
+
+
+/* REMOVE OLD NUMBER */
+
+.advantage-card::before,
+.advantage-card::after {
+    display: none;
+}
+
+
+/* LABEL */
+
+.advantage-card > span {
+    display: block;
+
+    margin-bottom: 22px;
+
+    font-size: .75rem;
+    font-weight: 800;
+
+    letter-spacing: .13em;
+    text-transform: uppercase;
+
+    color: var(--green);
+}
+
+
+/* TITLE */
+
+.advantage-card h3 {
+    max-width: 470px;
+
+    margin: 0 0 24px;
+
+    font-size: clamp(2rem, 2.5vw, 2.8rem);
+    line-height: 1.08;
+
+    letter-spacing: -.04em;
+
+    color: #007c83;
+}
+
+
+/* DESCRIPTION */
+
+.advantage-card p {
+    max-width: 470px;
+
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: #687785;
+}
+
+
+/* =========================================
+   CENTER PRODUCT VISUAL
+========================================= */
+
+.advantages-center {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 420px;
+}
+
+
+/* VERTICAL LINE */
+
+.advantages-center::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 1px;
+
+    background: rgba(15, 40, 55, .13);
+
+    transform: translateX(-50%);
+}
+
+
+/* IMAGE */
+
+.advantages-image-wrap {
+    position: relative;
+    z-index: 2;
+
+    width: 350px;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SOFT BACKGROUND BEHIND IMAGE */
+
+.advantages-image-wrap::before {
+    content: "";
+
+    position: absolute;
+
+    width: 245px;
+    height: 245px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(28, 120, 90, .12),
+            rgba(28, 120, 90, .035) 55%,
+            transparent 72%
+        );
+}
+
+
+/* PRODUCT IMAGE */
+
+.advantages-image-wrap img {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 22px 28px rgba(9, 42, 39, .16)
+        );
+}
+/* ==================================================
+   BETTER SUPPLY — COLOUR SLASH DESIGN
+================================================== */
+
+.business-features-section {
+    padding: 100px 0 115px;
+    overflow: hidden;
+    background: #fff;
+}
+
+
+/* ==============================
+   HEADING
+============================== */
+
+.business-features-head {
+    display: block;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.business-features-head > div {
+    width: 100%;
+}
+
+.business-features-head .eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--green);
+
+    font-size: .75rem;
+    font-weight: 800;
+
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.business-features-head h2 {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    color: var(--navy);
+
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    font-weight: 900;
+
+    line-height: 1;
+    letter-spacing: -.05em;
+}
+
+
+/* ==============================
+   MAIN GRID
+============================== */
+
+.business-features-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    min-height: 390px;
+
+    overflow: hidden;
+}
+
+
+/* ==============================
+   EACH SECTION
+============================== */
+
+.business-feature-card {
+    position: relative;
+
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 55px 45px;
+
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    overflow: hidden;
+}
+
+
+/* ==============================
+   DIFFERENT COLOUR SHADES
+============================== */
+
+/* 01 */
+
+.feature-01 {
+    color: #073e39;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff5e8 0%,
+            #c9eddb 100%
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            88% 100%,
+            0 100%
+        );
+}
+
+
+/* 02 */
+
+.feature-02 {
+    margin-left: -35px;
+    padding-left: 75px;
+
+    color: #075b68;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff4f5 0%,
+            #bfe7e9 100%
+        );
+
+    clip-path:
+        polygon(
+            12% 0,
+            100% 0,
+            88% 100%,
+            0 100%
+        );
+}
+
+
+/* 03 */
+
+.feature-03 {
+    margin-left: -35px;
+    padding-left: 75px;
+
+    color: #745814;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff4cf 0%,
+            #f7e3a1 100%
+        );
+
+    clip-path:
+        polygon(
+            12% 0,
+            100% 0,
+            88% 100%,
+            0 100%
+        );
+}
+
+
+/* 04 */
+
+.feature-04 {
+    margin-left: -35px;
+    padding-left: 75px;
+
+    color: #264d76;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3eef8 0%,
+            #cddfed 100%
+        );
+
+    clip-path:
+        polygon(
+            12% 0,
+            100% 0,
+            100% 100%,
+            0 100%
+        );
+}
+
+
+/* ==============================
+   LARGE NUMBER
+============================== */
+
+.business-feature-card > span {
+    position: absolute;
+
+    top: 38px;
+    left: 42px;
+
+    margin: 0;
+
+    font-size: 4.8rem;
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -.07em;
+
+    opacity: .12;
+}
+
+.feature-02 > span,
+.feature-03 > span,
+.feature-04 > span {
+    left: 72px;
+}
+
+
+/* ==============================
+   TITLES
+============================== */
+
+.business-feature-card h3 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 230px;
+
+    margin: 0 0 15px;
+
+    color: currentColor;
+
+    font-size: 1.55rem;
+    font-weight: 900;
+
+    line-height: 1.08;
+    letter-spacing: -.035em;
+}
+
+
+/* ==============================
+   DESCRIPTION
+============================== */
+
+.business-feature-card p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 230px;
+
+    margin: 0;
+
+    color: currentColor;
+
+    font-size: .85rem;
+    line-height: 1.65;
+
+    opacity: .78;
 }
