@@ -158,7 +158,131 @@ textarea {
     font-weight: 650;
     font-size: .92rem
 }
+/* ==================================================
+   RANGE OF PRODUCTS - DESKTOP DROPDOWN
+================================================== */
 
+.nav-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-dropdown-trigger {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 26px 0;
+
+    color: var(--ink);
+    font-size: .92rem;
+    font-weight: 650;
+    line-height: 1;
+
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-dropdown-trigger .dropdown-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: .72rem;
+    line-height: 1;
+
+    position: relative;
+    top: -1px;
+
+    transition: transform .25s ease;
+}
+/* Dropdown box */
+.nav-dropdown-menu {
+    position: absolute;
+
+    top: calc(100% - 5px);
+    left: 0;
+
+    width: 370px;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e8ea;
+    border-radius: 12px;
+
+    box-shadow:
+        0 22px 55px rgba(10, 34, 57, .15);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        
+        translateY(12px);
+
+    transition:
+        opacity .25s ease,
+        visibility .25s ease,
+        transform .25s ease;
+
+    z-index: 9999;
+}
+
+/* Dropdown links */
+.navlinks .nav-dropdown-menu a {
+    display: block;left: 50%;
+
+
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border-radius: 7px;
+
+    color: #15212b;
+
+    font-size: .84rem;
+    font-weight: 650;
+    line-height: 1.35;
+
+    white-space: normal;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        padding-left .2s ease;
+}
+
+/* Hover link */
+.navlinks .nav-dropdown-menu a:hover {
+    padding-left: 18px;
+
+    background: #eef8f6;
+    color: #006b70;
+}
+
+/* Show dropdown */
+.nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translateY(0);
+}
+
+/* Rotate arrow */
+.nav-dropdown:hover
+.nav-dropdown-trigger .dropdown-arrow {
+    transform: rotate(180deg);
+}
 .nav-actions {
     display: flex;
     gap: 10px
@@ -10344,4 +10468,329 @@ grid-template-columns:
         font-size: 13px;
     }
 
+}
+
+
+/* ==================================================
+   PRODUCT CATEGORY PAGE — ICE CREAMS
+================================================== */
+
+.product-category-hero {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 75px 0 70px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, .98) 0%,
+            rgba(255, 255, 255, .94) 32%,
+            rgba(255, 255, 255, .72) 48%,
+            rgba(255, 255, 255, .20) 68%,
+            rgba(255, 255, 255, 0) 100%
+        ),
+        url("../../assets/images/product-categories/icecream-hero.png");
+
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+.product-category-hero-inner {
+    max-width: 900px;
+}
+
+.product-category-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    font-size: .78rem;
+    color: #73808a;
+}
+
+.product-category-breadcrumb a {
+    color: #4c6978;
+    text-decoration: none;
+}
+
+.product-category-kicker {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: var(--green);
+
+    font-size: .75rem;
+    font-weight: 800;
+
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.product-category-hero h1 {
+    margin: 0 0 18px;
+
+    color: var(--navy);
+
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-weight: 900;
+
+    line-height: .95;
+    letter-spacing: -.055em;
+}
+
+.product-category-hero p {
+    max-width: 660px;
+
+    margin: 0;
+
+    color: #66737d;
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.product-category-hero {
+    position: relative;
+
+    min-height: 470px;
+
+    background-image:
+        url("../../assets/images/product-categories/icecream-hero.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.product-category-hero-inner {
+    position: relative;
+
+    width: min(100% - 40px, var(--container));
+    max-width: var(--container);
+
+    min-height: 470px;
+
+    margin: 0 auto;
+}
+
+
+/* BREADCRUMB ONLY */
+
+.product-category-breadcrumb {
+    position: absolute;
+
+    top: 28px;
+    left: 0;
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin: 0;
+
+    font-size: .78rem;
+    color: #536875;
+}
+
+.product-category-breadcrumb a {
+    color: #365d6c;
+    text-decoration: none;
+}
+
+.product-category-breadcrumb strong {
+    font-weight: 700;
+    color: #344f5c;
+}
+/* ==================================================
+   CATEGORY PRODUCT CATALOGUE — TAURUS STYLE
+================================================== */
+
+/* ==================================================
+   ICE CREAM PRODUCT CATALOGUE
+================================================== */
+
+.category-catalogue-section {
+    position: relative;
+
+    padding: 85px 0 100px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.96) 0%,
+            rgba(255,255,255,.92) 48%,
+            rgba(255,255,255,.82) 72%,
+            rgba(255,255,255,.68) 100%
+        ),
+        url("../../assets/images/product-categories/icecream-intro.png");
+
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+
+    background-attachment: scroll;
+}
+
+
+/* TWO COLUMN LAYOUT */
+
+.category-product-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 90px;
+    row-gap: 0;
+}
+
+
+/* EACH PRODUCT */
+
+.category-product-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    column-gap: 30px;
+
+    align-items: start;
+
+    padding: 22px 0 25px;
+
+    border: 0;
+    background: transparent;
+}
+
+
+/* PRODUCT NAME */
+
+.category-product-name {
+    font-size: 1.05rem;
+    font-weight: 500;
+
+    line-height: 1.35;
+    letter-spacing: 0;
+
+    text-transform: uppercase;
+
+    color: #111454;
+}
+
+
+/* SIZE */
+
+.category-product-size {
+    font-size: 1.05rem;
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    color: #111454;
+
+    text-align: right;
+}
+
+
+/* BRAND */
+
+.category-product-brand {
+    grid-column: 1 / -1;
+
+    margin-top: 12px;
+
+    font-size: .82rem;
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    color: #686868;
+}
+
+
+/* REMOVE ANY OLD DECORATION */
+
+.category-product-row::before,
+.category-product-row::after {
+    display: none;
+}
+/* =========================================
+   PRODUCT CATALOGUE HEADING — CENTER
+========================================= */
+
+.category-catalogue-section .section-head,
+.category-catalogue-header {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.category-catalogue-section .section-head > div,
+.category-catalogue-header > div {
+    width: 100%;
+    text-align: center;
+}
+
+/* PRODUCT CATALOGUE SMALL TEXT */
+
+.category-catalogue-section .eyebrow,
+.category-catalogue-kicker {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 12px;
+
+    text-align: center;
+
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+
+    color: var(--green);
+}
+
+/* ICE CREAM */
+
+.category-catalogue-section .section-head h2,
+.category-catalogue-header h2 {
+    width: 100%;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1;
+
+    letter-spacing: -.045em;
+
+    color: var(--navy);
 }
